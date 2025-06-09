@@ -1,0 +1,51 @@
+/* Remove margens, paddings e ajusta box-model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reescala 1rem para 62.5% do font-size padrão do browser(ex: 16px = 10px / 20px = 12.5px) */
+html {
+  font-size: 62.5%;
+}
+
+/* Remove decorações de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove estilos padrão de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Padroniza fontes e evitar problemas com herança */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* Remove bordas padrão de inputs e buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+/* Remove estilos de tabela */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evita problemas com imagens */
+img {
+  max-width: 100%;
+  display: block;
+}

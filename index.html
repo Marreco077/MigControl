@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MigControl - Soluções em Controle de Acesso e Ponto Eletrônico</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-blue: #1e40af;
+            --dark-bg: #1a1a1a;
+            --light-gray: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-blue) !important;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-image {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            width: 40px;
+            height: 40px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Services Grid */
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-10px);
+        }
+        
+        .service-card {
+            text-align: center;
+            padding: 2rem 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            background: var(--primary-blue);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card {
+            background: white;
+            color: var(--dark-bg);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .testimonial-quote {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+        }
+        
+        .stars {
+            color: #ffd700;
+            margin-top: 1rem;
+        }
+        
+        /* Products Section */
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: var(--light-gray);
+        }
+        
+        .about-shape {
+            background: var(--primary-blue);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-shape::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            position: relative;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
+            color: white;
+        }
+        
+        .footer h5 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background: var(--primary-blue);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-outline-light {
+            border: 2px solid white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .service-card {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-shield-alt me-2"></i>MigControl
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#products">IDFace Max</a></li>
+                            <li><a class="dropdown-item" href="#products">REP IDClass Facial</a></li>
+                            <li><a class="dropdown-item" href="#products">IDSECURE Cloud</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h4 class="text-white-50 mb-3">Soluções Completas</h4>
+                        <h1 class="hero-title">Soluções em Controle de Acesso e Ponto Eletrônico</h1>
+                        <p class="hero-subtitle">
+                            A MigControl é representante autorizada Control iD, oferecendo 
+                            tecnologia de ponta para segurança e gestão empresarial.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#products" class="btn btn-light btn-lg">
+                                Conheça nossos produtos
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                Fale Conosco
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=600&fit=crop&crop=face" 
+                             alt="Tecnologia Biométrica" 
+                             class="img-fluid rounded-circle"
+                             style="width: 400px; height: 400px; object-fit: cover; border: 5px solid rgba(255,255,255,0.2);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-camera fa-2x"></i>
+                        </div>
+                        <h6>Câmera Inteligente</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-mobile-alt fa-2x"></i>
+                        </div>
+                        <h6>Controle via Aplicativo com Reconhecimento Facial</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-fingerprint fa-2x"></i>
+                        </div>
+                        <h6>Controle de Acesso Biométrico</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-id-card fa-2x"></i>
+                        </div>
+                        <h6>Controle de Acesso</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-door-open fa-2x"></i>
+                        </div>
+                        <h6>Monitoramento de Ponto</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-cloud fa-2x"></i>
+                        </div>
+                        <h6>Software Integrado na Nuvem</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <h5 class="mb-3">Nick Weimann</h5>
+                        <p class="mb-3">
+                            Amet minim mollit non deserunt ullamco est 
+                            sit aliqua dolor do amet sint. Velit officia 
+                            consequat duis enim velit mollit. Exercitation 
+                            veniam consequat sunt nostrud amet.
+                        </p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-primary btn-sm">Próxima <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" 
+                         alt="Nick Weimann" 
+                         class="rounded" 
+                         style="width: 250px; height: 300px; object-fit: cover;">
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="text-white">
+                        <h2 class="mb-0" style="writing-mode: vertical-rl; text-orientation: mixed;">
+                            O QUE ESTÃO FALANDO SOBRE NÓS
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Produtos em Destaque</h2>
+                <p class="lead">Oferecemos aos nossos clientes um amplo portfólio de produtos, soluções e serviços através de um time fornecido. Veja abaixo alguns dos nossos destaques:</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="product-badge">NOVO</div>
+                            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=300&h=200&fit=crop" 
+                                 alt="IDFace Max" 
+                                 class="img-fluid">
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">IDFace Max</h5>
+                            <p class="text-muted mb-3">
+                                Controle de acesso com reconhecimento facial de alta performance. Ideal para ambientes empresariais que exigem máxima segurança.
+                            </p>
+                            <a href="#" class="text-primary text-decoration-none">Ver detalhes <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="product-badge">POPULAR</div>
+                            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&h=200&fit=crop" 
+                                 alt="REP IDClass Facial" 
+                                 class="img-fluid">
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">REP IDClass Facial</h5>
+                            <p class="text-muted mb-3">
+                                Repetidor de acesso com tecnologia facial avançada. Amplia o alcance do seu sistema de controle de acesso.
+                            </p>
+                            <a href="#" class="text-primary text-decoration-none">Ver detalhes <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="product-badge">CLOUD</div>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" 
+                                 alt="IDSECURE Cloud" 
+                                 class="img-fluid">
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">IDSECURE Cloud</h5>
+                            <p class="text-muted mb-3">
+                                Plataforma completa na nuvem para gerenciamento de acesso e controle de ponto. Acesse de qualquer lugar.
+                            </p>
+                            <a href="#" class="text-primary text-decoration-none">Ver detalhes <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-dark btn-lg">Ver todos os produtos <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-shape p-5 text-white position-relative">
+                        <h2 class="display-6 fw-bold mb-4">MigControl</h2>
+                        <h4 class="mb-4">Representante Control iD</h4>
+                        <p class="mb-4">
+                            Somos representantes autorizados da Control iD, oferecendo soluções tecnológicas 
+                            inovadoras para controle de acesso eletrônico e automação comercial, 
+                            com suporte técnico especializado e integração com diversos sistemas.
+                        </p>
+                        <a href="#contact" class="btn btn-light">
+                            Saiba Mais <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" 
+                         alt="Sobre a MigControl" 
+                         class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 position-relative">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold mb-3">
+                        Pronto para transformar a gestão e segurança da sua empresa?
+                    </h2>
+                    <p class="lead mb-4">
+                        Entre em contato conosco para uma demonstração ou orçamento 
+                        personalizado das soluções Control iD.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#contact" class="btn btn-light btn-lg">
+                        Solicite um orçamento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Sobre</h5>
+                    <p class="text-white-50">
+                        Representante autorizada Control iD, oferecendo 
+                        soluções completas em controle de acesso, ponto 
+                        eletrônico e automação comercial.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 mb-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home">Início</a></li>
+                        <li class="mb-2"><a href="#about">Sobre Nós</a></li>
+                        <li class="mb-2"><a href="#products">Produtos</a></li>
+                        <li class="mb-2"><a href="#blog">Blog</a></li>
+                        <li class="mb-2"><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Rua dos Quadrantes, 715 - Centro, Belo Horizonte - MG, 30180-100
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            (31) 3327-271
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            contato@migcontrol.com.br
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-white-50 mb-3">Receba nossas novidades e ofertas especiais</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Seu e-mail">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white-50">© 2025 MigControl. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 text-decoration-none me-3">Política de Privacidade</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/loadComponents.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Smooth scroll

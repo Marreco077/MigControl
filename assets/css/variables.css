@@ -1,0 +1,12 @@
+:root {
+  /* Cores */
+  --cor-fundo: #ffffff;
+  --cor-texto-primaria: #000000;
+  --cor-texto-secundaria: #ffffff;
+
+  /* Fontes */
+  --fonte: "";
+  --extrabold: 800;
+  --semi-bold: 600;
+  --medium: 500;
+}
