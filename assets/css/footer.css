@@ -210,3 +210,43 @@ body {
         transform: none;
     }
 }
+
+
+
+
+
+/* .footer { BORDA ALTERADA
+    background-color: #14141A;
+    color: #ffffff;
+    padding: 50px 0;
+    margin: 0;
+    border-radius: 100px 100px 0 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1e40af, #3b82f6, #60a5fa, #93c5fd);
+    border-radius: 100px 100px 0 0;
+    padding: 3px 3px 0 3px;
+    z-index: -1;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 0;
+    background-color: #14141A;
+    border-radius: 97px 97px 0 0;
+    z-index: -1;
+}
+/*
