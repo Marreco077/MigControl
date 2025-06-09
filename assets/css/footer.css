@@ -33,6 +33,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
 .footer-logo {
     display: flex;
     align-items: center;
@@ -83,16 +84,6 @@ body {
     font-weight: 600;
     margin-bottom: 20px;
     position: relative;
-}
-
-.footer-title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background-color: #ffffff;
 }
 
 .footer-text {
