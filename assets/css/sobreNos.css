@@ -1,0 +1,139 @@
+/* ===== MISSÃO, VISÃO E VALORES - CORREÇÃO ALTURA UNIFORME ===== */
+.mvv-section {
+    background: var(--background-white);
+}
+
+/* CORREÇÃO: Forçar flexbox na row para igualar alturas das colunas */
+.mvv-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Importante: estica as colunas */
+}
+
+.mvv-section .row > [class*="col-"] {
+    display: flex; /* Faz cada coluna ser flex */
+}
+
+/* MVV Container - ALTURA FIXA para garantir uniformidade */
+.mvv-card {
+    background: var(--gradient-primary);
+    min-height: 220px; /* Aumentei para acomodar o conteúdo dos valores */
+    box-shadow: var(--shadow-primary);
+    position: relative;
+    flex: 1; /* Preenche toda a altura disponível da coluna */
+    display: flex;
+    align-items: flex-start; /* Alinha conteúdo no topo */
+}
+
+.mvv-card:hover {
+    box-shadow: var(--shadow-primary-hover);
+}
+
+/* CORREÇÃO: Garantir que o conteúdo se distribua bem */
+.mvv-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+/* Conteúdo dos Cards */
+.mvv-content h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.01em;
+}
+
+.mvv-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Lista de Valores - usando classe base do main.css */
+.values-list {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-light);
+    margin-top: 0;
+}
+
+.values-list div {
+    margin-bottom: 0.4rem;
+    padding-left: var(--spacing-sm);
+    position: relative;
+}
+
+.values-list div:last-child {
+    margin-bottom: 0;
+}
+
+.values-list div::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVIDADE ESPECÍFICA ===== */
+/* Tablets */
+@media (max-width: 992px) {
+    .mvv-card {
+        min-height: 200px; /* Reduz um pouco em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .mvv-card {
+        min-height: 180px; /* Reduz mais em mobile */
+        border-radius: var(--border-radius-lg);
+    }
+   
+    .mvv-content h4 {
+        font-size: 1.15rem;
+    }
+   
+    .mvv-content p {
+        font-size: 0.88rem;
+    }
+   
+    .values-list {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    /* IMPORTANTE: Em mobile, desativa o flexbox para melhor experiência */
+    .mvv-section .row {
+        display: block;
+    }
+    
+    .mvv-section .row > [class*="col-"] {
+        display: block;
+    }
+    
+    .mvv-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-xl) var(--spacing-lg);
+        min-height: auto; /* Permite altura automática em mobile */
+        margin-bottom: 1rem; /* Espaçamento entre cards */
+    }
+   
+    .mvv-icon {
+        margin-right: 0 !important;
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* ===== ANIMAÇÕES ESPECÍFICAS ===== */
+.mvv-card:nth-child(1) { animation-delay: 0.1s; }
+.mvv-card:nth-child(2) { animation-delay: 0.2s; }
+.mvv-card:nth-child(3) { animation-delay: 0.3s; }
