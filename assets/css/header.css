@@ -1,0 +1,230 @@
+/* ===== HEADER - ESTILOS ESPECÍFICOS ===== */
+
+/* Header Base */
+.header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: none;
+    transition: var(--transition-base);
+}
+
+.header-main.scrolled {
+    background: rgba(37, 99, 235, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-primary);
+}
+
+.header-main .navbar {
+    padding: 1rem 0;
+    transition: var(--transition-base);
+}
+
+.header-main.scrolled .navbar {
+    padding: 0.7rem 0;
+}
+
+/* Logo */
+.navbar-brand {
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-base);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.navbar-brand:hover .logo-icon {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(5deg);
+}
+
+/* Navegação - adaptando .nav-link do main.css */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    padding: 0.7rem 1rem !important;
+    border-radius: var(--border-radius-sm);
+    margin: 0 0.3rem;
+    transition: var(--transition-base);
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-medium);
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    transition: var(--transition-base);
+}
+
+.dropdown-item:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Botão de Busca - usando padrão .icon-circle do main.css */
+.btn-search {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-full);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Mobile Toggle */
+.navbar-toggler {
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-sm);
+}
+
+.navbar-toggler-icon {
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+.navbar-toggler-icon i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Modal de Busca */
+.search-modal .modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-heavy);
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-input {
+    border: 2px solid rgba(37, 99, 235, 0.1);
+    border-radius: var(--border-radius-sm);
+    padding: 0.8rem 1rem;
+    transition: var(--transition-base);
+    flex: 1;
+}
+
+.search-input:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    outline: none;
+}
+
+.search-submit {
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 0.8rem 1.2rem;
+    color: white;
+    transition: var(--transition-base);
+}
+
+.search-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary-hover);
+}
+
+/* Body adjustment - removido para permitir transparência */
+body {
+    padding-top: 80px;
+}
+
+/* ===== RESPONSIVIDADE ESPECÍFICA ===== */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(37, 99, 235, 0.95);
+        backdrop-filter: blur(15px);
+        border-radius: var(--border-radius-md);
+        margin-top: 1rem;
+        padding: 1rem;
+        box-shadow: var(--shadow-medium);
+    }
+    
+    .btn-search {
+        margin-top: 1rem;
+        width: 100%;
+        height: auto;
+        padding: 0.8rem;
+        border-radius: var(--border-radius-sm);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-icon {
+        font-size: 1.8rem;
+        padding: 6px;
+    }
+    
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .search-input,
+    .search-submit {
+        width: 100%;
+    }
+}
