@@ -50,5 +50,5 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM carregado, iniciando carregamento dos componentes...");
 
   loadComponent("footer", "footer");
-  // loadComponent("header", "header"); // Descomente quando precisar
+  loadComponent("header", "header"); // Descomente quando precisar
 });

@@ -1,6 +1,84 @@
+/* ===== HERO SECTION ===== */
+.hero-section {
+    position: relative;
+    min-height: 60vh;
+    background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.85) 0%, rgba(29, 78, 216, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+    animation: fadeInUp 1s ease forwards;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1.2s ease forwards;
+    text-align: center;
+}
+
+/* ===== QUEM SOMOS SECTION ===== */
+.quem-somos-section {
+    background: var(--background-white);
+    padding: var(--spacing-4xl) 0;
+}
+
+.team-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-base);
+}
+
+.team-image:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.team-image img {
+    transition: var(--transition-slow);
+    width: 100%;
+    height: auto;
+}
+
+.team-image:hover img {
+    transform: scale(1.05);
+}
+
 /* ===== MISSÃO, VISÃO E VALORES - CORREÇÃO ALTURA UNIFORME ===== */
 .mvv-section {
-    background: var(--background-white);
+    background: var(--background-light);
+    padding: var(--spacing-4xl) 0;
 }
 
 /* CORREÇÃO: Forçar flexbox na row para igualar alturas das colunas */
@@ -23,10 +101,13 @@
     flex: 1; /* Preenche toda a altura disponível da coluna */
     display: flex;
     align-items: flex-start; /* Alinha conteúdo no topo */
+    border-radius: var(--border-radius-xl);
+    transition: var(--transition-base);
 }
 
 .mvv-card:hover {
     box-shadow: var(--shadow-primary-hover);
+    transform: translateY(-5px);
 }
 
 /* CORREÇÃO: Garantir que o conteúdo se distribua bem */
@@ -81,15 +162,73 @@
     font-weight: bold;
 }
 
-/* ===== RESPONSIVIDADE ESPECÍFICA ===== */
+/* ===== ANIMAÇÕES ===== */
+.mvv-card:nth-child(1) { 
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.1s; 
+}
+.mvv-card:nth-child(2) { 
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s; 
+}
+.mvv-card:nth-child(3) { 
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s; 
+}
+
+/* ===== RESPONSIVIDADE ===== */
+/* Desktop Large */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
 /* Tablets */
 @media (max-width: 992px) {
+    .hero-section {
+        min-height: 50vh;
+        background-attachment: scroll;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+        text-align: center;
+    }
+    
     .mvv-card {
         min-height: 200px; /* Reduz um pouco em tablets */
+    }
+    
+    .quem-somos-section {
+        padding: var(--spacing-3xl) 0;
     }
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+        min-height: 45vh;
+    }
+    
+    .hero-title {
+        font-size: 2.4rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        padding: 0 var(--spacing-md);
+    }
+    
     .mvv-card {
         min-height: 180px; /* Reduz mais em mobile */
         border-radius: var(--border-radius-lg);
@@ -106,10 +245,27 @@
     .values-list {
         font-size: 0.85rem;
     }
+    
+    .team-image {
+        margin-top: var(--spacing-xl);
+    }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
+    .hero-section {
+        min-height: 40vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 var(--spacing-lg);
+    }
+    
     /* IMPORTANTE: Em mobile, desativa o flexbox para melhor experiência */
     .mvv-section .row {
         display: block;
@@ -131,9 +287,8 @@
         margin-right: 0 !important;
         margin-bottom: var(--spacing-md);
     }
+    
+    .quem-somos-section {
+        padding: var(--spacing-2xl) 0;
+    }
 }
-
-/* ===== ANIMAÇÕES ESPECÍFICAS ===== */
-.mvv-card:nth-child(1) { animation-delay: 0.1s; }
-.mvv-card:nth-child(2) { animation-delay: 0.2s; }
-.mvv-card:nth-child(3) { animation-delay: 0.3s; }
