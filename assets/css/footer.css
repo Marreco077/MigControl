@@ -12,7 +12,7 @@
 
 /* Footer Base */
 .footer {
-    background-color: var(--background-dark);
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
     color: white;
     padding: 40px 0;
 }

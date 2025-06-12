@@ -1,3 +1,5 @@
+/* ===== SOBRE NÓS - ESTILOS ESPECÍFICOS ===== */
+
 /* ===== HERO SECTION ===== */
 .hero-section {
     position: relative;
@@ -32,18 +34,16 @@
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
     animation: fadeInUp 1s ease forwards;
-    text-align: center;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-light);
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
     line-height: 1.6;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 1.2s ease forwards;
-    text-align: center;
 }
 
 /* ===== QUEM SOMOS SECTION ===== */
@@ -75,32 +75,30 @@
     transform: scale(1.05);
 }
 
-/* ===== MISSÃO, VISÃO E VALORES - CORREÇÃO ALTURA UNIFORME ===== */
+/* ===== MISSÃO, VISÃO E VALORES ===== */
 .mvv-section {
     background: var(--background-light);
     padding: var(--spacing-4xl) 0;
 }
 
-/* CORREÇÃO: Forçar flexbox na row para igualar alturas das colunas */
 .mvv-section .row {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch; /* Importante: estica as colunas */
+    align-items: stretch;
 }
 
 .mvv-section .row > [class*="col-"] {
-    display: flex; /* Faz cada coluna ser flex */
+    display: flex;
 }
 
-/* MVV Container - ALTURA FIXA para garantir uniformidade */
 .mvv-card {
     background: var(--gradient-primary);
-    min-height: 220px; /* Aumentei para acomodar o conteúdo dos valores */
+    min-height: 220px;
     box-shadow: var(--shadow-primary);
     position: relative;
-    flex: 1; /* Preenche toda a altura disponível da coluna */
+    flex: 1;
     display: flex;
-    align-items: flex-start; /* Alinha conteúdo no topo */
+    align-items: flex-start;
     border-radius: var(--border-radius-xl);
     transition: var(--transition-base);
 }
@@ -110,7 +108,6 @@
     transform: translateY(-5px);
 }
 
-/* CORREÇÃO: Garantir que o conteúdo se distribua bem */
 .mvv-content {
     display: flex;
     flex-direction: column;
@@ -118,7 +115,6 @@
     flex: 1;
 }
 
-/* Conteúdo dos Cards */
 .mvv-content h4 {
     font-size: var(--font-size-xl);
     font-weight: 600;
@@ -136,7 +132,7 @@
     font-weight: 400;
 }
 
-/* Lista de Valores - usando classe base do main.css */
+/* ===== LISTA DE VALORES ===== */
 .values-list {
     font-size: 0.9rem;
     line-height: 1.4;
@@ -162,7 +158,7 @@
     font-weight: bold;
 }
 
-/* ===== ANIMAÇÕES ===== */
+/* ===== ANIMAÇÕES DOS CARDS MVV ===== */
 .mvv-card:nth-child(1) { 
     animation: fadeInUp 0.8s ease forwards;
     animation-delay: 0.1s; 
@@ -176,8 +172,7 @@
     animation-delay: 0.3s; 
 }
 
-/* ===== RESPONSIVIDADE ===== */
-/* Desktop Large */
+/* ===== RESPONSIVIDADE ESPECÍFICA ===== */
 @media (max-width: 1200px) {
     .hero-title {
         font-size: 3.2rem;
@@ -188,7 +183,6 @@
     }
 }
 
-/* Tablets */
 @media (max-width: 992px) {
     .hero-section {
         min-height: 50vh;
@@ -197,16 +191,14 @@
     
     .hero-title {
         font-size: 2.8rem;
-        text-align: center;
     }
     
     .hero-subtitle {
         font-size: 1.15rem;
-        text-align: center;
     }
     
     .mvv-card {
-        min-height: 200px; /* Reduz um pouco em tablets */
+        min-height: 200px;
     }
     
     .quem-somos-section {
@@ -230,7 +222,7 @@
     }
     
     .mvv-card {
-        min-height: 180px; /* Reduz mais em mobile */
+        min-height: 180px;
         border-radius: var(--border-radius-lg);
     }
    
@@ -251,7 +243,6 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
     .hero-section {
         min-height: 40vh;
@@ -266,7 +257,11 @@
         padding: 0 var(--spacing-lg);
     }
     
-    /* IMPORTANTE: Em mobile, desativa o flexbox para melhor experiência */
+    .quem-somos-section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    /* Desativa flexbox em mobile para melhor experiência */
     .mvv-section .row {
         display: block;
     }
@@ -279,16 +274,12 @@
         flex-direction: column;
         text-align: center;
         padding: var(--spacing-xl) var(--spacing-lg);
-        min-height: auto; /* Permite altura automática em mobile */
-        margin-bottom: 1rem; /* Espaçamento entre cards */
+        min-height: auto;
+        margin-bottom: 1rem;
     }
    
     .mvv-icon {
         margin-right: 0 !important;
         margin-bottom: var(--spacing-md);
-    }
-    
-    .quem-somos-section {
-        padding: var(--spacing-2xl) 0;
     }
 }
