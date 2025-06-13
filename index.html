@@ -12,8 +12,9 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/index.css">
@@ -54,29 +55,31 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="./assets/images/carrossel1.jpg" alt="Primeiro Slide">
+                    <img class="d-block w-100" src="./assets/images/carrossel1.png" alt="Primeiro Slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <p>Soluções Completas</p>
-                        <h5>Soluções em Controle de Ponto e Acesso Eletrônico</h5>
-                        <p>A MigControl é representante autorizada Control ID, oferecendo tecnologia de ponta para
+                        <p class="subtitle">Soluções Completas</p>
+                        <h1 class="title">Soluções em Controle de Ponto e Acesso Eletrônico</h1>
+                        <p class="description">A MigControl é representante autorizada Control ID, oferecendo tecnologia de ponta para
                             segurança e gestão empresarial</p>
-                        <button type="button" class="btn btn-outline-primary">Conheça nossos produtos.</button>
+                        <button type="button" class="btn">Conheça nossos produtos.</button>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./assets/images/carrossel2.jpg" alt="Segundo Slide">
+                    <img class="d-block w-100" src="./assets/images/carrossel2.png" alt="Segundo Slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Título do Slide 2</h5>
-                        <p>Descrição do slide 2.</p>
-                        <button type="button" class="btn btn-outline-primary">Conheça nossos produtos.</button>
+                        <p class="subtitle">+ Agilidade</p>
+                        <h1 class="title">Registro Ágil e sem filas do ponto dos Colaboradores</h1>
+                        <p class="description">A MigControl é representante autorizada Control iD, oferecendo tecnologia de ponta para segurança e gestão empresarial.</p>
+                        <button type="button" class="btn">Conheça nossos produtos.</button>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./assets/images/carrossel3.jpg" alt="Terceiro Slide">
+                    <img class="d-block w-100" src="./assets/images/carrossel3.png" alt="Terceiro Slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Título do Slide 3</h5>
-                        <p>Descrição do slide 3.</p>
-                        <button type="button" class="btn btn-outline-primary">Conheça nossos produtos.</button>
+                        <p class="subtitle">+ Segurança</p>
+                        <h1 class="title">Controle e Segurança no Acesso à sua Empresa</h1>
+                        <p class="description">A MigControl é representante autorizada Control iD, oferecendo tecnologia de ponta para segurança e gestão empresarial.</p>
+                        <button type="button" class="btn">Conheça nossos produtos.</button>
                     </div>
                 </div>
             </div>
@@ -94,60 +97,56 @@
 
 
     <!-- Services Section -->
-    <section class="product-bar py-5">
-        <div class="container">
-            <div class="row justify-content-center text-center g-4">
-
-                <div class="col-6 col-sm-4 col-md-2">
+    <section class="product-bar">
+            <div class="product-spacing class="col-6 col-sm-4 col-md-2"">
+                <div>
                     <a href="catraca.html" class="product-item d-block text-decoration-none">
                         <img src="./assets/icons/icon-catraca.png" alt="Catraca Inteligente" class="img-fluid mb-2"
-                            width="60">
-                        <p class="mb-0 text-dark">Catraca Inteligente</p>
+                            >
+                        <p>Catraca Inteligente</p>
                     </a>
                 </div>
 
-                <div class="col-6 col-sm-4 col-md-2">
+                <div>
                     <a href="reconhecimento-facial.html" class="product-item d-block text-decoration-none">
                         <img src="./assets/icons/icon-facial.png" alt="Reconhecimento Facial" class="img-fluid mb-2"
-                            width="60">
-                        <p class="mb-0 text-dark">Controlador de Acesso com Reconhecimento Facial</p>
+                            >
+                        <p>Controlador de Acesso com Reconhecimento Facial</p>
                     </a>
                 </div>
 
-                <div class="col-6 col-sm-4 col-md-2">
+                <div>
                     <a href="fechadura.html" class="product-item d-block text-decoration-none">
                         <img src="./assets/icons/icon-fechadura.png" alt="Fechadura Biométrica" class="img-fluid mb-2"
-                            width="60">
-                        <p class="mb-0 text-dark">Fechadura Digital<br>Biométrica</p>
+                            >
+                        <p>Fechadura Digital<br>Biométrica</p>
                     </a>
                 </div>
 
-                <div class="col-6 col-sm-4 col-md-2">
+                <div>
                     <a href="controle-acesso.html" class="product-item d-block text-decoration-none">
                         <img src="./assets/icons/icon-software-acessos.png" alt="Software Acesso" class="img-fluid mb-2"
-                            width="60">
-                        <p class="mb-0 text-dark">Software para<br>Controle de Acesso</p>
+                            >
+                        <p>Software para<br>Controle de Acesso</p>
                     </a>
                 </div>
 
-                <div class="col-6 col-sm-4 col-md-2">
+                <div>
                     <a href="registrador.html" class="product-item d-block text-decoration-none">
                         <img src="./assets/icons/icon-registrador.png" alt="Registrador Eletrônico"
-                            class="img-fluid mb-2" width="60">
-                        <p class="mb-0 text-dark">Registrador Eletrônico<br>de Ponto</p>
+                            class="img-fluid mb-2" >
+                        <p>Registrador Eletrônico<br>de Ponto</p>
                     </a>
                 </div>
 
-                <div class="col-6 col-sm-4 col-md-2">
+                <div>
                     <a href="apuracao.html" class="product-item d-block text-decoration-none">
                         <img src="./assets/icons/icon-software-apura.png" alt="Software Apuração" class="img-fluid mb-2"
-                            width="60">
-                        <p class="mb-0 text-dark">Software de Apuração<br>de Ponto</p>
+                            >
+                        <p>Software de Apuração<br>de Ponto</p>
                     </a>
                 </div>
-
             </div>
-        </div>
     </section>
 
     <!-- Products Section -->

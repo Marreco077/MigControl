@@ -1,92 +1,161 @@
-/* Ajuste setas carrossel */
+@import './variables.css';
 
+/* Ajuste setas carrossel */
 .carousel-control-prev {
-    left: -3vw;       /* aproxima da borda esquerda */
-    right: auto;     /* garante que não vai empurrar para o centro */
+  left: -3vw; /* aproxima da borda esquerda */
+  right: auto; /* garante que não vai empurrar para o centro */
 }
 
 .carousel-control-next {
-    right: -3vw;      /* aproxima da borda direita */
-    left: auto;      /* garante que não vai empurrar para o centro */
+  right: -3vw; /* aproxima da borda direita */
+  left: auto; /* garante que não vai empurrar para o centro */
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: auto; /* Remove largura cheia */
-    height: auto; /* Remove altura cheia */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: none;
-    padding: 0;
+  width: auto; /* Remove largura cheia */
+  height: auto; /* Remove altura cheia */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+  padding: 0;
 }
 
 .carousel-control-prev {
-    left: 15px;
+  left: 15px;
 }
 
 .carousel-control-next {
-    right: 15px;
+  right: 15px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.3); /* preto translúcido */
-    border-radius: 50%; /* círculo */
-    padding: 10px;       /* espaço interno para dar tamanho */
-    width: 40px;         /* largura fixa */
-    height: 40px;        /* altura fixa */
-    background-size: 20px 20px; /* tamanho do ícone interno */
-    background-repeat: no-repeat;
-    background-position: center;
-    pointer-events: auto; /* garante que o ícone recebe os eventos */
+  background-color: rgba(0, 0, 0, 0.3); /* preto translúcido */
+  border-radius: 50%; /* círculo */
+  padding: 10px; /* espaço interno para dar tamanho */
+  width: 40px; /* largura fixa */
+  height: 40px; /* altura fixa */
+  background-size: 20px 20px; /* tamanho do ícone interno */
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto; /* garante que o ícone recebe os eventos */
 }
 
 /* Dimensionamento do carrossel */
 
 .carousel-inner {
-    height: 100vh; /* ou qualquer valor desejado */
-    background-color: rgb(56, 56, 56);
+  height: 85vh; /* ou qualquer valor desejado */
+  background-color: rgb(56, 56, 56);
 }
 
 .carousel-item {
-    position: relative;
-    height: 100vh;
+  position: relative;
+  height: 85vh;
 }
 
 .carousel-item img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .carousel-caption {
-    position: absolute;
-    max-width: 400px;
-    bottom: 20%; /* ou ajuste conforme o desejado */
-    left: 10%; /* aproxima da borda esquerda */
-    right: auto;
-    transform: none;
-    text-align: left;
-    color: white;
-    z-index: 10;
+  position: absolute;
+  width: 800px;
+  height: 100%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  left: 0%;
+  padding: 0 100px;
+  right: auto;
+  transform: none;
+  text-align: left;
+  color: white;
+  z-index: 10;
 }
 
-.carousel-caption h5 {
-    font-size: 2rem;
+.carousel-caption .title {
+  font-size: 48px;
 }
 
+.carousel-caption .subtitle {
+  font-size: 28px;
+}
+
+.carousel-caption .description {
+  font-size: 20px;
+}
+
+.carousel-caption .btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-950);
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.carousel-caption .btn:hover {
+  border-radius: 8px;
+}
 /* Formatação do menu de serviços */
 
+.product-bar {
+  width: 100%;
+  height: auto; /* Mudança para permitir altura variável */
+  min-height: 15vh; /* Altura mínima */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0; /* Adicionar padding vertical */
+}
+
+.product-bar > div {
+  width: 100%;
+}
+
+.product-spacing {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 colunas por padrão (desktop) */
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+/* Tablet - 4 colunas */
+@media (max-width: 1200px) {
+  .product-spacing {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile - 2 colunas */
+@media (max-width: 768px) {
+  .product-spacing {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .product-bar {
+    min-height: auto;
+    padding: 15px 0;
+  }
+}
+
+/* Mobile muito pequeno - 1 coluna */
+@media (max-width: 480px) {
+  .product-spacing {
+    grid-template-columns: 1fr;
+  }
+}
+
 .product-item {
-  flex: 1 1 150px;
-  max-width: 200px;
-  height: 17vh;
-  padding: 20px 10px;
-  border-radius: 12px;
-  background-color: white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,23 +163,20 @@
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;
-  font-size: .7rem;
 }
 
 .product-item img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
 }
 
 .product-item p {
+  color: var(--color-gray-800);
   margin: 0;
   font-size: 14px;
   line-height: 1.3;
   display: -webkit-box;
-  line-clamp: 4;
-  -webkit-line-clamp: 4;         /* Máximo de 3 linhas */
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -118,10 +184,21 @@
 }
 
 .product-item:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  transform: translateY(-6px);
-  background-color: #f9f9f9;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
   text-decoration: none;
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+  .product-item img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .product-item p {
+    font-size: 12px;
+  }
 }
 
 /*  Produtos  */
@@ -160,7 +237,7 @@
   padding: 20px;
   text-align: left;
   border-radius: 8px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(-40px);
   animation: cair 0.6s forwards;
@@ -235,6 +312,6 @@
 }
 
 .botao:hover {
-  background: #222;  
+  background: #222;
   text-decoration: none;
 }
