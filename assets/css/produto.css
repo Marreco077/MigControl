@@ -173,6 +173,31 @@ body {
   font-size: 0.95rem;
 }
 
+/* Video Section */
+.video-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.video-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin-bottom: 30px;
+}
+
+.video-button {
+  margin-top: 20px;
+}
+
 /* Technical Details */
 .tech-details {
   padding: 80px 0;
@@ -379,6 +404,10 @@ body {
     gap: 30px;
   }
 
+  .video-container {
+    padding: 0 15px;
+  }
+
   .box-content .container {
     flex-direction: column;
     gap: 40px;
@@ -419,6 +448,7 @@ body {
 
   .hero,
   .features-section,
+  .video-section,
   .tech-details,
   .box-content,
   .cta,
