@@ -31,6 +31,11 @@
 .navbar-brand {
     justify-self: start;
     margin-right: 0;
+    border: none
+}
+
+.navbar-brand:hover {
+    border: none
 }
 
 .navbar-collapse {
@@ -48,10 +53,6 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
-}
-
-.header-main.scrolled .navbar {
-    padding: 0.5rem 0;
 }
 
 /* Logo Styles */
