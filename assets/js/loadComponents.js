@@ -44,7 +44,19 @@ async function loadComponent(componentName, targetElementId) {
   } catch (error) {
     console.error(`❌ Erro ao carregar ${componentName}:`, error);
   }
+  
+  window.addEventListener('scroll', function () {
+  const header = document.querySelector('.header-main');
+
+  if (window.scrollY > 0) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM carregado, iniciando carregamento dos componentes...");
