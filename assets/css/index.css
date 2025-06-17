@@ -38,7 +38,7 @@
 /* Dimensionamento do carrossel */
 .carousel-inner,
 .carousel-item {
-  height: 78vh;
+  height: 76vh;
   background-color: rgb(56, 56, 56);
 }
 
@@ -51,8 +51,8 @@
 .carousel-caption {
   position: absolute;
   width: 800px;
-  height: 100%;
-  top: 40%;
+  height: 350px;
+  top: 30%;
   left: 0%;
   padding: 0 100px;
   text-align: left;
@@ -97,54 +97,33 @@
 }
 
 /* Formatação do menu de serviços */
-.product-bar {
-  width: 100%;
-  height: 12vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-}
 
-.product-bar>div {
-  width: 80%;
+.product-bar {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .product-spacing {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 0 100px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 1200px) {
-  .product-spacing {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .product-spacing {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 0 15px;
-  }
-
-  .product-bar {
-    padding: 15px 0;
-    min-height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-spacing {
-    grid-template-columns: 1fr;
-  }
+  scrollbar-width: none; /* Firefox */
 }
 
 .product-item {
-  width: 100%;
+  width: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;

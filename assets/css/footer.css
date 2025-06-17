@@ -1,4 +1,5 @@
 /* ===== FOOTER - ESTILOS ESPECÍFICOS ===== */
+@import './variables.css';
 
 /* Main Content (caso não esteja em outro arquivo) */
 .main-content {
@@ -12,7 +13,7 @@
 
 /* Footer Base */
 .footer {
-    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    background: var(--color-gray-800);
     color: white;
     padding: 40px 0;
 }
