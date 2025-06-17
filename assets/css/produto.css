@@ -173,14 +173,27 @@ body {
   color: var(--color-gray-50);
 }
 
+.video-container {
+  position: relative;
+}
+
 .video-container video {
   width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 35px rgba(66, 133, 244, 0.3), 
+              0 8px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 30px;
   background-color: var(--color-gray-200);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.video-container video:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(66, 133, 244, 0.4), 
+              0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .video-button {
@@ -307,6 +320,25 @@ body {
   font-size: 0.85rem;
   color: #666;
   margin: 0;
+}
+
+.box-content-image video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(66, 133, 244, 0.3), 
+              0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+  background-color: var(--color-gray-200);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.box-content-image video:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(66, 133, 244, 0.4), 
+              0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Downloads Section */
