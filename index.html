@@ -7,10 +7,10 @@
     <title>MigControl - Soluções em Controle de Acesso e Ponto Eletrônico</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,21 +36,22 @@
 
     <!-- Hero Section -->
     <section id="home" class="position-relative">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="./assets/images/carrossel1.png" alt="Primeiro Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <p class="subtitle">Soluções Completas</p>
                         <h1 class="title">Soluções em Controle de Ponto e Acesso Eletrônico</h1>
-                        <p class="description">A MigControl é representante autorizada Control ID, oferecendo tecnologia
-                            de ponta para
-                            segurança e gestão empresarial</p>
+                        <p class="description">A MigControl é representante autorizada Control ID...</p>
                         <button type="button" class="btn">Conheça nossos produtos.</button>
                     </div>
                 </div>
@@ -59,8 +60,7 @@
                     <div class="carousel-caption d-none d-md-block">
                         <p class="subtitle">+ Agilidade</p>
                         <h1 class="title">Registro Ágil e sem filas do ponto dos Colaboradores</h1>
-                        <p class="description">A MigControl é representante autorizada Control iD, oferecendo tecnologia
-                            de ponta para segurança e gestão empresarial.</p>
+                        <p class="description">A MigControl é representante autorizada Control iD...</p>
                         <button type="button" class="btn">Conheça nossos produtos.</button>
                     </div>
                 </div>
@@ -69,22 +69,22 @@
                     <div class="carousel-caption d-none d-md-block">
                         <p class="subtitle">+ Segurança</p>
                         <h1 class="title">Controle e Segurança no Acesso à sua Empresa</h1>
-                        <p class="description">A MigControl é representante autorizada Control iD, oferecendo tecnologia
-                            de ponta para segurança e gestão empresarial.</p>
+                        <p class="description">A MigControl é representante autorizada Control iD...</p>
                         <button type="button" class="btn">Conheça nossos produtos.</button>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
+                <span class="visually-hidden">Próximo</span>
+            </button>
         </div>
-
     </section>
 
 
@@ -270,26 +270,23 @@
     <div id="footer"></div>
 
     <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
         crossorigin="anonymous"></script>
 
     <!-- Carrousel anti pause -->
     <script>
-        const carousel = document.querySelector('#carouselExampleIndicators');
-
-        // Reativa o autoplay mesmo após interação
-        $('#carouselExampleIndicators').carousel({
+        const carouselElement = document.getElementById('carouselExampleIndicators');
+        const carousel = new bootstrap.Carousel(carouselElement, {
             interval: 5000,
             pause: false
         });
     </script>
+
 
     <!-- Forms collapse -->
     <script>
