@@ -11,11 +11,9 @@ body {
 }
 
 .container-fluid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 85px 100px 10px;
+  padding: 85px 20px 10px;
 }
 
 /* Hero Section */
@@ -27,18 +25,22 @@ body {
 .hero .container-fluid {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  gap: 40px;
 }
 
 .hero-content {
-  /* flex: 1; */
+  flex: 1;
   max-width: 600px;
+  min-width: 300px;
 }
 
 .hero-image {
-  /* flex: 1; */
+  flex: 1;
   text-align: center;
+  min-width: 300px;
 }
 
 .hero-image img {
@@ -460,8 +462,29 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 968px) {
+  .container-fluid {
+    padding: 85px 40px 10px;
+  }
+  
+  .hero .container-fluid {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-content, .hero-image {
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
 @media (max-width: 768px) {
-  .hero .container {
+  .container-fluid {
+    padding: 85px 20px 10px;
+  }
+  
+  .hero .container-fluid {
     flex-direction: column;
     text-align: center;
     gap: 40px;
@@ -533,8 +556,8 @@ body {
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
+  .container, .container-fluid {
+    padding: 60px 15px 10px;
   }
 
   .hero,
