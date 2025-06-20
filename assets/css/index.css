@@ -75,9 +75,9 @@
   font-size: 20px;
 }
 
+/* Botões gerais da página (botão do carrossel e do banner about) */
 .carousel-caption .btn,
-.about-btn,
-#toggleFormBtn {
+.about-btn {
   margin-top: 20px;
   padding: 12px 24px;
   background-color: var(--color-gray-50);
@@ -91,15 +91,13 @@
 }
 
 .carousel-caption .btn:hover,
-.about-btn:hover,
-#toggleFormBtn:hover {
+.about-btn:hover {
   border-radius: 8px;
 }
 
 /* Formatação do menu de serviços */
-
 .product-bar {
-  padding: 0 100px;;
+  padding: 0 100px;
   position: relative;
   height: auto;
   width: 100%;
@@ -281,7 +279,7 @@
   border-radius: 8px;
 }
 
-/* Forms */
+/* Banner gerais */
 .banner {
   background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
   color: var(--color-gray-50);
@@ -321,97 +319,9 @@
   margin-bottom: 1.5rem;
 }
 
-#toggleFormBtn::after {
-  content: "↓";
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-#toggleFormBtn.rotate::after {
-  transform: rotate(-180deg);
-}
-
 .image-content img {
   max-width: 300px;
   height: auto;
-}
-
-.form-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  transition: max-height 0.6s ease, opacity 0.6s ease;
-  overflow: hidden;
-}
-
-.form-section.hidden {
-  max-height: 0;
-  padding: 0 2rem;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.form-section.visible {
-  max-height: 1000px;
-  opacity: 1;
-  pointer-events: auto;
-  padding: 2rem;
-}
-
-.form-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form-row {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.form-row input {
-  flex: 1;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--color-gray-200);
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.checkbox-wrapper {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.submit-btn {
-  background: var(--color-primary-500);
-  color: var(--color-gray-50);
-  border: none;
-  padding: 0.8rem 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  align-self: flex-end;
 }
 
 /* Responsivo */

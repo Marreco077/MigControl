@@ -1,0 +1,141 @@
+.custom-modal {
+  background: var(--color-gray-50);
+  border-radius: 12px;
+  border: none;
+  color: var(--color-gray-900);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--color-gray-200);
+  background: var(--color-primary-500);
+  color: var(--color-gray-50);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-content .form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; /* espaço entre linhas */
+}
+
+/* Inputs e selects lado a lado */
+.modal-content input,
+.modal-content select {
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem 1rem; /* padding horizontal aumentado para conforto */
+  border: 1px solid var(--color-gray-300); /* tom de borda um pouco mais claro */
+  border-radius: 8px; /* cantos levemente mais arredondados */
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  border-color: var(--color-primary-500);
+  outline: none;
+  box-shadow: 0 0 6px var(--color-primary-300);
+}
+
+/* Textarea com largura total */
+.modal-content textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content textarea:focus {
+  border-color: var(--color-primary-500);
+  outline: none;
+  box-shadow: 0 0 6px var(--color-primary-300);
+}
+
+/* Checkbox alinhado */
+.modal-content .checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 1rem;
+  user-select: none;
+}
+
+.modal-content a {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.modal-content a:hover {
+  color: var(--color-primary-900);
+}
+
+.submit-btn {
+  background: var(--color-primary-500);
+  color: var(--color-gray-50);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: var(--color-primary-600);
+  box-shadow: 0 4px 10px rgba(0, 87, 217, 0.4);
+}
+
+#confirmModalLabel {
+    font-weight: bolder;
+}
+
+.banner-content .btn{
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-950);
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: border-radius 0.3s ease;
+}
+
+.banner-content .btn:hover{
+  border-radius: 8px;
+}
+
+/* Select ocupa toda a largura */
+select[name="produto"] {
+  flex: 1 1 100%; /* força ocupar 100% da linha */
+  width: 100%;
+  margin-bottom: 1rem; /* espaçamento abaixo */
+  background-color: #fff;
+  color: var(--color-gray-900);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M6%207L0%200h12L6%207z%22%20fill%3D%22%23666%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px 7px;
+  padding-right: 2.5rem;
+}
+

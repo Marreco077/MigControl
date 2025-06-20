@@ -20,6 +20,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+
 
     <link rel="preload" as="image" href="./assets/images/carrossel2.jpg">
     <link rel="preload" as="image" href="./assets/images/carrossel3.jpg">
@@ -214,58 +217,75 @@
                 <button type="button" class="about-btn">Sobre nós...</button>
             </div>
         </div>
-    </section>
-
-    <section>
-        <p></p>
-        <p></p>
-        <p></p>
 
     </section>
+    <section class="diferenciais container py-5">
+        <div class="text-center mb-5">
+            <h2 class="about-title">Nossos Diferenciais</h2>
+            <p class="text-muted mx-auto">
+                Oferecemos aos nossos clientes um amplo portfólio de produtos, soluções e serviços através de um
+                único fornecedor. Veja abaixo alguns dos nossos destaques.
+            </p>
+        </div>
 
-    <!-- CTA Section -->
-    <section class="banner preforms">
-        <div class="banner-content">
-            <div class="text-content">
-                <h1>Pronto para transformar a <br> gestão e segurança da sua empresa?</h1>
-                <p>Entre em contato abaixo conosco para uma demonstração ou orçamento personalizado das soluções Control
-                    ID.</p>
-                    <button id="toggleFormBtn">Fale com especialistas </button>
+        <div class="row justify-content-center gy-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="diferencial-card">
+                    <div class="card-icon">
+                        <img src="./assets/icons/headset-icon.png" alt="Ícone de suporte">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Suporte Técnico Especializado</h3>
+                        <p>
+                            Equipe qualificada e certificada pela ConnecID para instalação, configuração e
+                            manutenção. Aqui vai mais algumas palavras aleatórias só pra gente fingir que há algo
+                            que não sei o que estou falando.
+                        </p>
+                    </div>
                 </div>
-                <div class="image-content">
-                    <img src="assets/images/banner-forms.png" alt="Mulher segurando notebook" />
+            </div>
+
+            <!-- Clone os blocos acima para os outros dois cards -->
+            <div class="col-md-6 col-lg-4">
+                <div class="diferencial-card">
+                    <div class="card-icon">
+                        <img src="./assets/icons/headset-icon.png" alt="Ícone de suporte">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Suporte Técnico Especializado</h3>
+                        <p>
+                            Equipe qualificada e certificada pela ConnecID para instalação, configuração e
+                            manutenção. Aqui vai mais algumas palavras aleatórias só pra gente fingir que há algo
+                            que não sei o que estou falando.
+                        </p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="diferencial-card">
+                    <div class="card-icon">
+                        <img src="./assets/icons/headset-icon.png" alt="Ícone de suporte">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Suporte Técnico Especializado</h3>
+                        <p>
+                            Equipe qualificada e certificada pela ConnecID para instalação, configuração e
+                            manutenção. Aqui vai mais algumas palavras aleatórias só pra gente fingir que há algo
+                            que não sei o que estou falando.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="formSection" class="form-section hidden">
-        <h2>Fale com especialistas</h2>
-        <form>
-            <div class="form-row">
-                <input type="text" name="nome" placeholder="Nome*" required />
-                <input type="email" name="email" placeholder="E-mail*" required />
-            </div>
-            <div class="form-row">
-                <input type="text" name="cnpj" placeholder="CNPJ*" required />
-                <input type="text" name="telefone" placeholder="Telefone*" required />
-            </div>
-            <input type="text" name="produto" placeholder="Selecione o produto" />
-            <textarea name="mensagem" placeholder="Escreva sua mensagem:"></textarea>
-            <div class="checkbox-wrapper">
-                <div>
-                    <input type="checkbox" id="consent" required />
-                </div>
-                <div>
-                    <label for="consent">
-                        Concordo em compartilhar minhas informações com vocês e entendo que elas serão usadas conforme
-                        descrito na
-                        <a href="#" target="_blank">política de privacidade da migcontrol</a>.
-                    </label>
-                </div>
-            </div>
-            <button type="submit" class="submit-btn">Enviar ➤</button>
-        </form>
-    </section>
+
+    <!-- CTA Section -->
+    <div id="forms">
+
+    </div>
+
 
     <!-- Footer será carregado dinamicamente aqui -->
     <div id="footer"></div>
@@ -288,22 +308,7 @@
         });
     </script>
 
-
-    <!-- Forms collapse -->
-    <script>
-        const toggleBtn = document.getElementById("toggleFormBtn");
-        const formSection = document.getElementById("formSection");
-
-        toggleBtn.addEventListener("click", () => {
-            formSection.classList.toggle("hidden");
-            formSection.classList.toggle("visible");
-            toggleBtn.classList.toggle("rotate");
-        });
-    </script>
-
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/loadComponents.js"></script>
-
-    <script>
-        // Smooth scroll
+    <script src="assets/js/cards.js"></script>
