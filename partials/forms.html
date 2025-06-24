@@ -1,157 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>MigControl - Header</title>
 
-		<!-- Font Awesome -->
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-			rel="stylesheet"
-		/>
-		<!-- CSS Files -->
-		<link rel="stylesheet" href="main.css" />
-		<link rel="stylesheet" href="forms.css" />
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MigControl - Header</title>
 
-	<body>
-		<section class="banner preforms">
-			<div class="banner-content">
-				<div class="image">
-					<img
-						src="assets/images/banner-forms.png"
-						alt="Mulher segurando notebook"
-					/>
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="forms.css" />
+</head>
+
+<body>
+	<section class="banner preforms">
+		<div class="banner-content">
+			<div class="image">
+				<img src="assets/images/banner-forms.png" alt="Mulher segurando notebook" />
+			</div>
+			<div class="text-content">
+				<h1>Pronto para transformar a gestão e segurança da sua empresa?</h1>
+				<p>
+					Entre em contato abaixo conosco para uma demonstração ou orçamento
+					personalizado das soluções Control ID.
+				</p>
+				<button id="toggleFormBtn" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#formModal">
+					Fale com especialistas
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="formSection">
+		<!-- Modal: Formulário -->
+		<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content custom-modal">
+					<div class="modal-header">
+						<h5 class="modal-title" id="formModalLabel">
+							Fale com especialistas
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+					</div>
+					<div class="modal-body">
+						<form id="formularioContato">
+							<div class="form-row">
+								<input type="text" name="nome" placeholder="Nome*" required />
+								<input type="email" name="email" placeholder="E-mail*" required />
+							</div>
+							<div class="form-row">
+								<input type="text" name="cnpj" placeholder="CNPJ*" required />
+								<input type="text" name="telefone" placeholder="Telefone*" required />
+							</div>
+							<select name="produto" id="produto" required>
+								<option value="">Selecione um produto</option>
+								<option value="1">Produto 1</option>
+								<option value="2">Produto 2</option>
+								<option value="3">Produto 3</option>
+								<option value="4">Produto 4</option>
+								<option value="5">Produto 5</option>
+								<option value="6">Produto 6</option>
+								<option value="7">Produto 7</option>
+								<option value="8">Produto 8</option>
+							</select>
+							<textarea name="mensagem" placeholder="Escreva sua mensagem:"></textarea>
+							<div class="checkbox-wrapper">
+								<div><input type="checkbox" id="consent" name="consent" value="Sim" required /></div>
+
+								<div>
+									<label for="consent">
+										Concordo em compartilhar minhas informações com vocês e
+										entendo que elas serão usadas conforme descrito na
+										<a href="#">política de privacidade da migcontrol</a>.
+									</label>
+								</div>
+							</div>
+							<button type="submit" class="submit-btn w-100 mt-3">
+								Enviar ➤
+							</button>
+						</form>
+					</div>
 				</div>
-				<div class="text-content">
-					<h1>Pronto para transformar a gestão e segurança da sua empresa?</h1>
-					<p>
-						Entre em contato abaixo conosco para uma demonstração ou orçamento
-						personalizado das soluções Control ID.
-					</p>
-					<button
-						id="toggleFormBtn"
-						class="btn btn-light"
-						data-bs-toggle="modal"
-						data-bs-target="#formModal"
-					>
-						Fale com especialistas
+			</div>
+		</div>
+
+		<!-- Modal: Confirmação -->
+		<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content custom-modal text-center p-4">
+					<h5 class="modal-title mb-3" id="confirmModalLabel"></h5>
+					<p id="confirmModalMessage"></p>
+					<button type="button" class="submit-btn mt-3" data-bs-dismiss="modal">
+						Fechar
 					</button>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
+</body>
 
-		<section id="formSection">
-			<!-- Modal: Formulário -->
-			<div
-				class="modal fade"
-				id="formModal"
-				tabindex="-1"
-				aria-labelledby="formModalLabel"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<div class="modal-content custom-modal">
-						<div class="modal-header">
-							<h5 class="modal-title" id="formModalLabel">
-								Fale com especialistas
-							</h5>
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="modal"
-								aria-label="Fechar"
-							></button>
-						</div>
-						<div class="modal-body">
-							<form id="formularioContato">
-								<div class="form-row">
-									<input type="text" name="nome" placeholder="Nome*" required />
-									<input
-										type="email"
-										name="email"
-										placeholder="E-mail*"
-										required
-									/>
-								</div>
-								<div class="form-row">
-									<input type="text" name="cnpj" placeholder="CNPJ*" required />
-									<input
-										type="text"
-										name="telefone"
-										placeholder="Telefone*"
-										required
-									/>
-								</div>
-								<select name="produto" id="produto" required>
-									<option value="">Selecione um produto</option>
-									<option value="1">Produto 1</option>
-									<option value="2">Produto 2</option>
-									<option value="3">Produto 3</option>
-									<option value="4">Produto 4</option>
-									<option value="5">Produto 5</option>
-									<option value="6">Produto 6</option>
-									<option value="7">Produto 7</option>
-									<option value="8">Produto 8</option>
-								</select>
-								<textarea
-									name="mensagem"
-									placeholder="Escreva sua mensagem:"
-								></textarea>
-								<div class="checkbox-wrapper">
-									<div><input type="checkbox" id="consent" required /></div>
+<script src="https://unpkg.com/imask"></script>
 
-									<div>
-										<label for="consent">
-											Concordo em compartilhar minhas informações com vocês e
-											entendo que elas serão usadas conforme descrito na
-											<a href="#">política de privacidade da migcontrol</a>.
-										</label>
-									</div>
-								</div>
-								<button type="submit" class="submit-btn w-100 mt-3">
-									Enviar ➤
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Modal: Confirmação -->
-			<div
-				class="modal fade"
-				id="confirmModal"
-				tabindex="-1"
-				aria-labelledby="confirmModalLabel"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content custom-modal text-center p-4">
-						<h5 class="modal-title mb-3" id="confirmModalLabel">
-							Mensagem enviada com sucesso!
-						</h5>
-						<p>
-							Suas informações foram enviadas, entraremos em contato via
-							WhatsApp em até 3 dias úteis.<br /><br />
-							Agradecemos o contato.<br /><br />
-							Se preferir, fale diretamente com nossos representantes em horário
-							comercial pelo telefone:<br />
-							<strong>(31) 99999-9999</strong>
-						</p>
-						<button
-							type="button"
-							class="submit-btn mt-3"
-							data-bs-dismiss="modal"
-						>
-							Fechar
-						</button>
-					</div>
-				</div>
-			</div>
-		</section>
-	</body>
-
-	<script src="https://unpkg.com/imask"></script>
 </html>

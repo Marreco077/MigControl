@@ -60,6 +60,19 @@
     font-weight: 300;
 }
 
+.diferencial-card .card-body-custom li {
+    font-size: 13px;
+    font-weight: lighter;
+    list-style-type: disc;
+}
+
+.diferenciais {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 80px 100px;
+}
+
 /* .about-title {
     display: flex;
     justify-items: flex-start;

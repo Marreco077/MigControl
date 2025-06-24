@@ -1,16 +1,36 @@
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("formularioContato");
-    const formModal = new bootstrap.Modal(document.getElementById("formModal"));
-    const confirmModal = new bootstrap.Modal(document.getElementById("confirmModal"));
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("formularioContato");
+  const formModalElement = document.getElementById("formModal");
+  const confirmModalElement = document.getElementById("confirmModal");
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  const confirmModalLabel = document.getElementById("confirmModalLabel");
+  const confirmModalMessage = document.getElementById("confirmModalMessage");
 
-      // Simular envio (substitua por requisição AJAX se necessário)
-      setTimeout(() => {
-        formModal.hide(); // fecha o modal do formulário
-        confirmModal.show(); // abre o de confirmação
-        form.reset(); // limpa o formulário
-      }, 500);
-    });
+  const formModal = new bootstrap.Modal(formModalElement);
+  const confirmModal = new bootstrap.Modal(confirmModalElement);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_t6u7cro", "template_igkiyrd", form)
+      .then(() => {
+        confirmModalLabel.textContent = "Mensagem enviada com sucesso!";
+        confirmModalMessage.innerHTML = `
+          Suas informações foram enviadas, entraremos em contato via WhatsApp em até 3 dias úteis.<br><br>
+          Agradecemos o contato.<br><br>
+          Se preferir, fale diretamente com nossos representantes em horário comercial pelo telefone:<br>
+          <strong>(31) 99999-9999</strong>
+        `;
+        formModal.hide();
+        confirmModal.show();
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar o formulário:", error);
+        confirmModalLabel.textContent = "Erro no envio";
+        confirmModalMessage.textContent = "Falha no envio dos dados. Por favor, tente novamente mais tarde.";
+        formModal.hide();
+        confirmModal.show();
+      });
   });
+});

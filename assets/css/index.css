@@ -38,7 +38,7 @@
 /* Dimensionamento do carrossel */
 .carousel-inner,
 .carousel-item {
-  height: 88vh;
+  height: 86vh;
 }
 
 .carousel-item img {
@@ -346,48 +346,8 @@
   z-index: 2;
 }
 
-.diferenciais {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  padding: 80px 100px;
-}
-
-.banner.preforms {
-  border-top-left-radius: 175px;
-  padding-bottom: 0;
-}
-
-.banner.preforms .banner-content {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  gap: 100px;
-}
-
-.banner.preforms .text-content {
-  width: 650px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.banner.preforms .text-content h1 {
-  font-size: 54px;
-  line-height: 54px;
-}
-
-.banner.preforms .btn {
-  width: fit-content;
-}
-
 /* Responsivo */
 @media (max-width: 768px) {
-  .preforms-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .image-content img {
     margin-top: 2rem;
   }

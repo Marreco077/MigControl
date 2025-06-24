@@ -21,6 +21,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/sobreNos.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
 </head>
 
 <body>
@@ -84,80 +85,70 @@
     </section>
 
     <!-- Missão, Visão e Valores Section -->
-    <section class="py-5 mvv-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="text-center mb-5 fw-bold section-title-center">Missão, Visão e Valores</h2>
-                </div>
-            </div>
+    		<section class="diferenciais container-fluid">
+			<div class="text-content">
+				<h1>Missão, Visão e Valores</h1>
+			</div>
+			<div class="row justify-content-center gy-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="diferencial-card">
+						<div class="card-icon">
+							<img
+								src="./assets/icons/headset-icon.png"
+								alt="Ícone de suporte"
+							/>
+						</div>
+						<div class="card-body-custom">
+							<h3>Missão</h3>
+							<p>
+								Oferecer soluções tecnológicas inovadoras que otimizem processos, aumentem a segurança e contribuam para o sucesso dos nossos clientes.
+							</p>
+						</div>
+					</div>
+				</div>
 
-            <div class="row g-4 justify-content-center">
-                <!-- Missão -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="mvv-card d-flex align-items-center p-4">
-                        <!-- Círculo com ícone -->
-                        <div class="mvv-icon me-4 flex-shrink-0">
-                            <div class="icon-circle d-flex align-items-center justify-content-center">
-                                <i class="fas fa-bullseye"></i>
-                            </div>
-                        </div>
-                        <!-- Conteúdo -->
-                        <div class="mvv-content flex-grow-1">
-                            <h4 class="fw-bold mb-2">Missão</h4>
-                            <p class="mb-0">
-                                Oferecer soluções tecnológicas inovadoras que aumentem a segurança e confiabilidade para
-                                a transformação digital.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+				<!-- Clone os blocos acima para os outros dois cards -->
+				<div class="col-md-6 col-lg-4">
+					<div class="diferencial-card">
+						<div class="card-icon">
+							<img
+								src="./assets/icons/headset-icon.png"
+								alt="Ícone de suporte"
+							/>
+						</div>
+						<div class="card-body-custom">
+							<h3>Visão</h3>
+							<p>
+								Ser referência nacional em soluções de controle de acesso e ponto eletrônico, reconhecida pela excelência em produtos e serviços.
+							</p>
+						</div>
+					</div>
+				</div>
 
-                <!-- Visão -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="mvv-card d-flex align-items-center p-4">
-                        <!-- Círculo com ícone -->
-                        <div class="mvv-icon me-4 flex-shrink-0">
-                            <div class="icon-circle d-flex align-items-center justify-content-center">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <!-- Conteúdo -->
-                        <div class="mvv-content flex-grow-1">
-                            <h4 class="fw-bold mb-2">Visão</h4>
-                            <p class="mb-0">
-                                Ser referência nacional em soluções de controle de acesso e ponto eletrônico,
-                                reconhecida pela excelência e inovação.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+				<div class="col-md-6 col-lg-4">
+					<div class="diferencial-card">
+						<div class="card-icon">
+							<img
+								src="./assets/icons/headset-icon.png"
+								alt="Ícone de suporte"
+							/>
+						</div>
+						<div class="card-body-custom">
+							<h3>Valores</h3>
+							<ul>
+                                <li>Compromisso com a qualidade</li>
+                                <li>Ética e transparência</li>
+                                <li>Inovação tecnológica</li>
+                                <li>Foco no cliente</li>
+                                <li>Responsabilidade social</li>
+                            </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                <!-- Valores -->
-                <div class="col-lg-4 col-md-8">
-                    <div class="mvv-card d-flex align-items-center p-4">
-                        <!-- Círculo com ícone -->
-                        <div class="mvv-icon me-4 flex-shrink-0">
-                            <div class="icon-circle d-flex align-items-center justify-content-center">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                        <!-- Conteúdo -->
-                        <div class="mvv-content flex-grow-1">
-                            <h4 class="fw-bold mb-2">Valores</h4>
-                            <div class="values-list">
-                                <div>Comprometimento com a qualidade</div>
-                                <div>Ética e transparência</div>
-                                <div>Inovação tecnológica</div>
-                                <div>Foco no cliente</div>
-                                <div>Responsabilidade social</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="forms"></div>
 
     <!-- Footer será carregado dinamicamente aqui -->
     <div id="footer"></div>
@@ -168,6 +159,7 @@
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/loadComponents.js"></script>
+    <script src="assets/js/cards.js"></script>
 </body>
 
 </html>
