@@ -52,15 +52,15 @@
 .diferencial-card .card-body-custom h3 {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .diferencial-card .card-body-custom p {
     font-size: 13px;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
-.about-title {
+/* .about-title {
     display: flex;
     justify-items: flex-start;
     font-weight: bold;
@@ -82,7 +82,7 @@
 
 .row.justify-content-center.gy-4 {
     padding-bottom: 60px;
-}
+} */
 
 @media (max-width: 768px) {
     .diferencial-card {
