@@ -1,309 +1,455 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			MigControl - Soluções em Controle de Acesso e Ponto Eletrônico
+		</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MigControl - Soluções em Controle de Acesso e Ponto Eletrônico</title>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<link rel="stylesheet" href="assets/css/cards.css" />
+		<link rel="stylesheet" href="assets/css/forms.css" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+		<link rel="preload" as="image" href="./assets/images/carrossel2.jpg" />
+		<link rel="preload" as="image" href="./assets/images/carrossel3.jpg" />
+	</head>
 
-    <link rel="preload" as="image" href="./assets/images/carrossel2.jpg">
-    <link rel="preload" as="image" href="./assets/images/carrossel3.jpg">
+	<body>
+		<!-- Header -->
+		<div id="header"></div>
 
+		<!-- Hero Section -->
+		<section id="home" class="position-relative">
+			<div
+				id="carouselExampleIndicators"
+				class="carousel slide"
+				data-bs-ride="carousel"
+			>
+				<div class="carousel-indicators">
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="0"
+						class="active"
+						aria-current="true"
+						aria-label="Slide 1"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="1"
+						aria-label="Slide 2"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="2"
+						aria-label="Slide 3"
+					></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img
+							class="d-block w-100"
+							src="./assets/images/carrossel1.png"
+							alt="Primeiro Slide"
+						/>
+						<div class="carousel-caption">
+							<h2 class="subtitle">Soluções Completas</h2>
+							<h1 class="title">
+								Soluções em Controle de Ponto e Acesso Eletrônico
+							</h1>
+							<p class="description">
+								A MigControl é representante autorizada Control ID...
+							</p>
+							<button type="button" class="btn">
+								Conheça nossos produtos.
+							</button>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img
+							class="d-block w-100"
+							src="./assets/images/carrossel2.png"
+							alt="Segundo Slide"
+						/>
+						<div class="carousel-caption">
+							<p class="subtitle">+ Agilidade</p>
+							<h1 class="title">
+								Registro Ágil e sem filas do ponto dos Colaboradores
+							</h1>
+							<p class="description">
+								A MigControl é representante autorizada Control iD...
+							</p>
+							<button type="button" class="btn">
+								Conheça nossos produtos.
+							</button>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img
+							class="d-block w-100"
+							src="./assets/images/carrossel3.png"
+							alt="Terceiro Slide"
+						/>
+						<div class="carousel-caption">
+							<p class="subtitle">+ Segurança</p>
+							<h1 class="title">
+								Controle e Segurança no Acesso à sua Empresa
+							</h1>
+							<p class="description">
+								A MigControl é representante autorizada Control iD...
+							</p>
+							<button type="button" class="btn">
+								Conheça nossos produtos.
+							</button>
+						</div>
+					</div>
+				</div>
+				<button
+					class="carousel-control-prev"
+					type="button"
+					data-bs-target="#carouselExampleIndicators"
+					data-bs-slide="prev"
+				>
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Anterior</span>
+				</button>
+				<button
+					class="carousel-control-next"
+					type="button"
+					data-bs-target="#carouselExampleIndicators"
+					data-bs-slide="next"
+				>
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Próximo</span>
+				</button>
+			</div>
+		</section>
 
-</head>
+		<!-- Services Section -->
 
-<body>
-    <!-- Header -->
-    <div id="header">
+		<section class="product-bar">
+			<div class="col-6 col-sm-4 col-md-2 product-spacing">
+				<div>
+					<a
+						href="catraca.html"
+						class="product-item d-block text-decoration-none"
+					>
+						<img
+							src="./assets/icons/icon-catraca.png"
+							alt="Catraca Inteligente"
+							class="img-fluid mb-2"
+						/>
+						<p>Catraca Inteligente</p>
+					</a>
+				</div>
 
-    </div>
+				<div>
+					<a
+						href="reconhecimento-facial.html"
+						class="product-item d-block text-decoration-none"
+					>
+						<img
+							src="./assets/icons/icon-facial.png"
+							alt="Reconhecimento Facial"
+							class="img-fluid mb-2"
+						/>
+						<p>Controlador de Acesso com Reconhecimento Facial</p>
+					</a>
+				</div>
 
+				<div>
+					<a
+						href="fechadura.html"
+						class="product-item d-block text-decoration-none"
+					>
+						<img
+							src="./assets/icons/icon-fechadura.png"
+							alt="Fechadura Biométrica"
+							class="img-fluid mb-2"
+						/>
+						<p>Fechadura Digital<br />Biométrica</p>
+					</a>
+				</div>
 
-    <!-- Hero Section -->
-    <section id="home" class="position-relative">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="./assets/images/carrossel1.png" alt="Primeiro Slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p class="subtitle">Soluções Completas</p>
-                        <h1 class="title">Soluções em Controle de Ponto e Acesso Eletrônico</h1>
-                        <p class="description">A MigControl é representante autorizada Control ID...</p>
-                        <button type="button" class="btn">Conheça nossos produtos.</button>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./assets/images/carrossel2.png" alt="Segundo Slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p class="subtitle">+ Agilidade</p>
-                        <h1 class="title">Registro Ágil e sem filas do ponto dos Colaboradores</h1>
-                        <p class="description">A MigControl é representante autorizada Control iD...</p>
-                        <button type="button" class="btn">Conheça nossos produtos.</button>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./assets/images/carrossel3.png" alt="Terceiro Slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p class="subtitle">+ Segurança</p>
-                        <h1 class="title">Controle e Segurança no Acesso à sua Empresa</h1>
-                        <p class="description">A MigControl é representante autorizada Control iD...</p>
-                        <button type="button" class="btn">Conheça nossos produtos.</button>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
-        </div>
-    </section>
+				<div>
+					<a
+						href="controle-acesso.html"
+						class="product-item d-block text-decoration-none"
+					>
+						<img
+							src="./assets/icons/icon-software-acessos.png"
+							alt="Software Acesso"
+							class="img-fluid mb-2"
+						/>
+						<p>Software para<br />Controle de Acesso</p>
+					</a>
+				</div>
 
+				<div>
+					<a
+						href="registrador.html"
+						class="product-item d-block text-decoration-none"
+					>
+						<img
+							src="./assets/icons/icon-registrador.png"
+							alt="Registrador Eletrônico"
+							class="img-fluid mb-2"
+						/>
+						<p>Registrador Eletrônico<br />de Ponto</p>
+					</a>
+				</div>
 
-    <!-- Services Section -->
+				<div>
+					<a
+						href="apuracao.html"
+						class="product-item d-block text-decoration-none"
+					>
+						<img
+							src="./assets/icons/icon-software-apura.png"
+							alt="Software Apuração"
+							class="img-fluid mb-2"
+						/>
+						<p>Software de Apuração<br />de Ponto</p>
+					</a>
+				</div>
+			</div>
+		</section>
 
-    <section class="product-bar">
-        <div class="col-6 col-sm-4 col-md-2 product-spacing">
-            <div>
-                <a href="catraca.html" class="product-item d-block text-decoration-none">
-                    <img src="./assets/icons/icon-catraca.png" alt="Catraca Inteligente" class="img-fluid mb-2">
-                    <p>Catraca Inteligente</p>
-                </a>
-            </div>
+		<!-- Products Section -->
+		<section class="produtos-destaque">
+			<div class="container-fluid">
+				<div class="titulo">
+					<h1>Produtos em Destaque</h1>
+					<p class="descricao">
+						Oferecemos aos nossos clientes um amplo portfólio de produtos,
+						soluções e serviços através de um único fornecedor. Veja abaixo
+						alguns dos nossos destaques.
+					</p>
+				</div>
 
-            <div>
-                <a href="reconhecimento-facial.html" class="product-item d-block text-decoration-none">
-                    <img src="./assets/icons/icon-facial.png" alt="Reconhecimento Facial" class="img-fluid mb-2">
-                    <p>Controlador de Acesso com Reconhecimento Facial</p>
-                </a>
-            </div>
+				<div class="produtos-grid">
+					<!-- Produto 1 -->
+					<div class="produto-card" style="--delay: 0s">
+						<div class="imagem-wrapper">
+							<img
+								src="./assets/images/produtos/produto-iDFaceMax.png"
+								alt="Produto 1"
+							/>
+							<span class="tag">Controle de Acesso</span>
+						</div>
+						<div class="produto-texto">
+							<h4>iDFaceMax</h4>
+							<p class="descricao">
+								Controlador de acesso com reconhecimento facial de alta
+								performance, ideal para ambientes que exigem segurança rigorosa.
+							</p>
+							<a href="#">Ver detalhes →</a>
+						</div>
+					</div>
 
-            <div>
-                <a href="fechadura.html" class="product-item d-block text-decoration-none">
-                    <img src="./assets/icons/icon-fechadura.png" alt="Fechadura Biométrica" class="img-fluid mb-2">
-                    <p>Fechadura Digital<br>Biométrica</p>
-                </a>
-            </div>
+					<!-- Produto 2 -->
+					<div class="produto-card" style="--delay: 0.2s">
+						<div class="imagem-wrapper">
+							<img
+								src="./assets/images/produtos/produto-REP-iDClass-Facial.png"
+								alt="Produto 2"
+							/>
+							<span class="tag">Controle de Ponto</span>
+						</div>
+						<div class="produto-texto">
+							<h4>REP iDClass Facial</h4>
+							<p class="descricao">
+								Registrador eletrônico de ponto com reconhecimento facial, em
+								conformidade com a Portaria 671/2021 do MTP.
+							</p>
+							<a href="#">Ver detalhes →</a>
+						</div>
+					</div>
 
-            <div>
-                <a href="controle-acesso.html" class="product-item d-block text-decoration-none">
-                    <img src="./assets/icons/icon-software-acessos.png" alt="Software Acesso" class="img-fluid mb-2">
-                    <p>Software para<br>Controle de Acesso</p>
-                </a>
-            </div>
+					<!-- Produto 3 -->
+					<div class="produto-card" style="--delay: 0.4s">
+						<div class="imagem-wrapper">
+							<img
+								src="./assets/images/produtos/produto-iDSECURE-Cloud.png"
+								alt="Produto 3"
+							/>
+							<span class="tag">Software</span>
+						</div>
+						<div class="produto-texto">
+							<h4>iDSECURE Cloud</h4>
+							<p class="descricao">
+								Software de controle de acesso em nuvem para gerenciamento
+								centralizado de todos os dispositivos Control iD.
+							</p>
+							<a href="#">Ver detalhes →</a>
+						</div>
+					</div>
+				</div>
 
-            <div>
-                <a href="registrador.html" class="product-item d-block text-decoration-none">
-                    <img src="./assets/icons/icon-registrador.png" alt="Registrador Eletrônico" class="img-fluid mb-2">
-                    <p>Registrador Eletrônico<br>de Ponto</p>
-                </a>
-            </div>
+				<div class="ver-todos">
+					<a href="/produtos" class="botao">Ver todos os produtos →</a>
+				</div>
+			</div>
+		</section>
 
-            <div>
-                <a href="apuracao.html" class="product-item d-block text-decoration-none">
-                    <img src="./assets/icons/icon-software-apura.png" alt="Software Apuração" class="img-fluid mb-2">
-                    <p>Software de Apuração<br>de Ponto</p>
-                </a>
-            </div>
-        </div>
-    </section>
+		<!-- About Section -->
+		<section class="banner about">
+			<div class="banner-content">
+				<div class="image-content">
+					<div class="forma1"></div>
+					<div class="forma2"></div>
+				</div>
+				<div class="text-content">
+					<div class="title">
+						<h1>
+							MigControl
+							<h2>Representante Control iD</h2>
+						</h1>
+						<p>
+							Somos representantes autorizados da Control iD, oferecendo
+							soluções tecnológicas inovadoras para controle de acesso, registro
+							eletrônico de ponto e automação comercial, com suporte técnico
+							especializado e integração com diversos sistemas.
+						</p>
+					</div>
+					<button type="button" class="about-btn">Sobre nós...</button>
+				</div>
+			</div>
+		</section>
 
-    <!-- Products Section -->
-    <section class="produtos-destaque">
-        <div class="container-fluid">
-            <div class="titulo">
-                <h2>Produtos em Destaque</h2>
-                <p class="descricao">
-                    Oferecemos aos nossos clientes um amplo portfólio de produtos, soluções e serviços através de um
-                    único
-                    fornecedor. Veja abaixo alguns dos nossos destaques.
-                </p>
-            </div>
+		<!-- Differentials Section -->
+		<section class="diferenciais container-fluid">
+			<div class="text-content">
+				<h1>Nossos Diferenciais</h1>
+				<p>
+					Oferecemos aos nossos clientes um amplo portfólio de produtos,
+					soluções e serviços através de um único fornecedor. Veja abaixo alguns
+					dos nossos destaques.
+				</p>
+			</div>
+			<div class="row justify-content-center gy-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="diferencial-card">
+						<div class="card-icon">
+							<img
+								src="./assets/icons/headset-icon.png"
+								alt="Ícone de suporte"
+							/>
+						</div>
+						<div class="card-body-custom">
+							<h3>Suporte Técnico Especializado</h3>
+							<p>
+								Equipe qualificada e certificada pela ConnecID para instalação,
+								configuração e manutenção. Aqui vai mais algumas palavras
+								aleatórias só pra gente fingir que há algo que não sei o que
+								estou falando.
+							</p>
+						</div>
+					</div>
+				</div>
 
-            <div class="produtos-grid">
-                <!-- Produto 1 -->
-                <div class="produto-card" style="--delay: 0s">
-                    <div class="imagem-wrapper">
-                        <img src="./assets/images/product1.webp" alt="Produto 1">
-                        <span class="tag">Controle de Acesso</span>
-                    </div>
-                    <div class="produto-texto">
-                        <h4>iDFaceMax</h4>
-                        <p class="descricao">Controlador de acesso com reconhecimento facial de alta performance, ideal
-                            para ambientes que exigem segurança rigorosa.</p>
-                        <a href="#">Ver detalhes →</a>
-                    </div>
-                </div>
+				<!-- Clone os blocos acima para os outros dois cards -->
+				<div class="col-md-6 col-lg-4">
+					<div class="diferencial-card">
+						<div class="card-icon">
+							<img
+								src="./assets/icons/headset-icon.png"
+								alt="Ícone de suporte"
+							/>
+						</div>
+						<div class="card-body-custom">
+							<h3>Suporte Técnico Especializado</h3>
+							<p>
+								Equipe qualificada e certificada pela ConnecID para instalação,
+								configuração e manutenção. Aqui vai mais algumas palavras
+								aleatórias só pra gente fingir que há algo que não sei o que
+								estou falando.
+							</p>
+						</div>
+					</div>
+				</div>
 
-                <!-- Produto 2 -->
-                <div class="produto-card" style="--delay: 0.2s">
-                    <div class="imagem-wrapper">
-                        <img src="./assets/images/product2.webp" alt="Produto 2">
-                        <span class="tag">Controle de Ponto</span>
-                    </div>
-                    <div class="produto-texto">
-                        <h4>REP iDClass Facial</h4>
-                        <p class="descricao">Registrador eletrônico de ponto com reconhecimento facial, em conformidade
-                            com a Portaria 671/2021 do MTP.</p>
-                        <a href="#">Ver detalhes →</a>
-                    </div>
-                </div>
+				<div class="col-md-6 col-lg-4">
+					<div class="diferencial-card">
+						<div class="card-icon">
+							<img
+								src="./assets/icons/headset-icon.png"
+								alt="Ícone de suporte"
+							/>
+						</div>
+						<div class="card-body-custom">
+							<h3>Suporte Técnico Especializado</h3>
+							<p>
+								Equipe qualificada e certificada pela ConnecID para instalação,
+								configuração e manutenção. Aqui vai mais algumas palavras
+								aleatórias só pra gente fingir que há algo que não sei o que
+								estou falando.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                <!-- Produto 3 -->
-                <div class="produto-card" style="--delay: 0.4s">
-                    <div class="imagem-wrapper">
-                        <img src="./assets/images/product3.webp" alt="Produto 3">
-                        <span class="tag">Software</span>
-                    </div>
-                    <div class="produto-texto">
-                        <h4>iDSECURE Cloud</h4>
-                        <p class="descricao">Software de controle de acesso em nuvem para gerenciamento centralizado de
-                            todos os dispositivos Control iD.</p>
-                        <a href="#">Ver detalhes →</a>
-                    </div>
-                </div>
-            </div>
+		<!-- CTA Section -->
+		<div id="forms"></div>
 
-            <div class="ver-todos">
-                <a href="/produtos" class="botao">Ver todos os produtos →</a>
-            </div>
-        </div>
-    </section>
+		<!-- Footer será carregado dinamicamente aqui -->
+		<div id="footer"></div>
 
+		<!-- Bootstrap JS -->
 
-    <!-- About Section -->
-    <section class="banner about">
-        <div class="banner-content">
-            <div class="image-content">
-                <img src="assets/images/formas-banner.png" alt="Mulher segurando notebook" />
-            </div>
-            <div class="text-content">
-                <h1>MigControl Representante Control iD</h1>
-                <p>Somos representantes autorizados da Control iD, oferecendo soluções tecnológicas inovadoras para
-                    controle de acesso,
-                    registro eletrônico de ponto e automação comercial, com suporte técnico especializado e integração
-                    com diversos sistemas.</p>
-                <button type="button" class="about-btn">Sobre nós...</button>
-            </div>
-        </div>
-    </section>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+			integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+			crossorigin="anonymous"
+		></script>
 
-    <section>
-        <p></p>
-        <p></p>
-        <p></p>
+		<!-- Carrousel anti pause -->
+		<script>
+			const carouselElement = document.getElementById(
+				"carouselExampleIndicators"
+			);
+			const carousel = new bootstrap.Carousel(carouselElement, {
+				interval: 5000,
+				pause: false,
+			});
+		</script>
 
-    </section>
-
-    <!-- CTA Section -->
-    <section class="banner preforms">
-        <div class="banner-content">
-            <div class="text-content">
-                <h1>Pronto para transformar a <br> gestão e segurança da sua empresa?</h1>
-                <p>Entre em contato abaixo conosco para uma demonstração ou orçamento personalizado das soluções Control
-                    ID.</p>
-                    <button id="toggleFormBtn">Fale com especialistas </button>
-                </div>
-                <div class="image-content">
-                    <img src="assets/images/banner-forms.png" alt="Mulher segurando notebook" />
-                </div>
-        </div>
-    </section>
-
-    <section id="formSection" class="form-section hidden">
-        <h2>Fale com especialistas</h2>
-        <form>
-            <div class="form-row">
-                <input type="text" name="nome" placeholder="Nome*" required />
-                <input type="email" name="email" placeholder="E-mail*" required />
-            </div>
-            <div class="form-row">
-                <input type="text" name="cnpj" placeholder="CNPJ*" required />
-                <input type="text" name="telefone" placeholder="Telefone*" required />
-            </div>
-            <input type="text" name="produto" placeholder="Selecione o produto" />
-            <textarea name="mensagem" placeholder="Escreva sua mensagem:"></textarea>
-            <div class="checkbox-wrapper">
-                <div>
-                    <input type="checkbox" id="consent" required />
-                </div>
-                <div>
-                    <label for="consent">
-                        Concordo em compartilhar minhas informações com vocês e entendo que elas serão usadas conforme
-                        descrito na
-                        <a href="#" target="_blank">política de privacidade da migcontrol</a>.
-                    </label>
-                </div>
-            </div>
-            <button type="submit" class="submit-btn">Enviar ➤</button>
-        </form>
-    </section>
-
-    <!-- Footer será carregado dinamicamente aqui -->
-    <div id="footer"></div>
-
-    <!-- Bootstrap JS -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-        crossorigin="anonymous"></script>
-
-    <!-- Carrousel anti pause -->
-    <script>
-        const carouselElement = document.getElementById('carouselExampleIndicators');
-        const carousel = new bootstrap.Carousel(carouselElement, {
-            interval: 5000,
-            pause: false
-        });
-    </script>
-
-
-    <!-- Forms collapse -->
-    <script>
-        const toggleBtn = document.getElementById("toggleFormBtn");
-        const formSection = document.getElementById("formSection");
-
-        toggleBtn.addEventListener("click", () => {
-            formSection.classList.toggle("hidden");
-            formSection.classList.toggle("visible");
-            toggleBtn.classList.toggle("rotate");
-        });
-    </script>
-
-    <!-- Custom JavaScript -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/loadComponents.js"></script>
-
-    <script>
-        // Smooth scroll
+		<!-- Custom JavaScript -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/loadComponents.js"></script>
+		<script src="assets/js/cards.js"></script>
+	</body>
+</html>
