@@ -42,9 +42,63 @@
     flex-shrink: 0;
 }
 
-/* Conteúdo Principal */
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Conteúdo Principal - CORREÇÃO AQUI */
 .footer-content {
     margin-bottom: 30px;
+}
+
+.footer-content .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Garantir que cada coluna tenha largura igual */
+.footer-content .col-lg-4,
+.footer-content .col-md-4 {
+    flex: 1;
+    min-width: 0; /* Permite que o texto quebre corretamente */
+}
+
+/* Alinhamento específico para cada coluna */
+.footer-content .col-lg-4:first-child,
+.footer-content .col-md-4:first-child {
+    text-align: left; /* Primeira coluna à esquerda */
+}
+
+.footer-content .col-lg-4:nth-child(2),
+.footer-content .col-md-4:nth-child(2) {
+    text-align: center; /* Segunda coluna ao centro */
+}
+
+.footer-content .col-lg-4:last-child,
+.footer-content .col-md-4:last-child {
+    text-align: right; /* Terceira coluna à direita */
 }
 
 .footer-title {
@@ -67,6 +121,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    display: inline-block; /* Para manter o alinhamento central */
 }
 
 .footer-links li {
@@ -104,6 +159,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: flex-end; /* Alinha os itens à direita */
 }
 
 .contact-item {
@@ -113,6 +169,7 @@
     color: var(--text-light);
     font-size: 0.95rem;
     transition: var(--transition-base);
+    text-align: right;
 }
 
 .contact-item:hover {
@@ -124,6 +181,11 @@
     font-size: 1rem;
     margin-top: 2px;
     min-width: 16px;
+    order: 2; /* Coloca o ícone após o texto para alinhamento à direita */
+}
+
+.contact-item span {
+    order: 1;
 }
 
 /* Footer Bottom */
@@ -141,8 +203,31 @@
 
 /* ===== RESPONSIVIDADE ESPECÍFICA ===== */
 @media (max-width: 991px) {
-    .footer-content .col-lg-4 {
-        margin-bottom: 30px;
+    .footer-content .row {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-content .col-lg-4,
+    .footer-content .col-md-4 {
+        text-align: center !important;
+    }
+    
+    .contact-info {
+        align-items: center;
+    }
+    
+    .contact-item {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .contact-item i {
+        order: 0;
+    }
+    
+    .contact-item span {
+        order: 1;
     }
 }
 
@@ -157,18 +242,14 @@
         padding: 30px 0;
     }
    
-    .footer-content {
-        text-align: center;
+    .footer-content .row {
+        gap: 30px;
     }
    
-    .contact-item {
-        justify-content: center;
-    }
-    
     .footer-links a {
         transform: none;
     }
-    
+   
     .footer-links a:hover {
         transform: none;
     }
