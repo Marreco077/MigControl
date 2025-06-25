@@ -57,3 +57,22 @@ p {
   margin: 0;
   padding: 0;
 }
+
+.button {
+  width: fit-content;
+  padding: 14px 26px;
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-950);
+  border-radius: 0;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  border-radius: 12px;
+  filter: opacity(.9);
+}

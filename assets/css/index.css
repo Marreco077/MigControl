@@ -74,32 +74,15 @@
   font-size: 20px;
 }
 
-/* Botões gerais da página (botão do carrossel e do banner about) */
-.carousel-caption .btn,
-.about-btn {
-  /* margin-top: 20px; */
-  width: fit-content;
-  padding: 12px 24px;
-  background-color: var(--color-gray-50);
-  color: var(--color-gray-950);
-  border-radius: 0;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  transition: border-radius 0.3s ease;
-}
-
-.carousel-caption .btn:hover,
-.about-btn:hover {
-  border-radius: 8px;
+.carousel-caption .button {
+  margin-top: 10px;
 }
 
 /* Formatação do menu de serviços */
 .product-bar {
   padding: 0 100px;
   position: relative;
-  height: auto;
+  height: 14vh;
   width: 100%;
   overflow: auto;
   display: flex;
@@ -123,11 +106,12 @@
 
 .product-item {
   width: 160px;
-  height: 14vh;
-  padding-top: 16px;
+  height: 100%;
+  /* padding-top: 16px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;
@@ -267,40 +251,32 @@
   justify-content: flex-start;
 }
 
-.botao {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--color-gray-800);
+.ver-todos .button {
+  background: var(--color-primary-600);
   color: var(--color-gray-50);
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-
-.botao:hover {
-  background: var(--color-gray-600);
-  color: var(--color-gray-50);
-  border-radius: 8px;
 }
 
 /* Banner gerais */
 .banner {
   background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
   color: var(--color-gray-50);
-  padding: 80px 100px;
+  padding: 80px 160px;
 }
 
 .banner.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom-right-radius: 175px;
-  height: 660px;
+  height: auto;
 }
 
 .banner-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: auto;
+  justify-content: center;
+  gap: 100px;
+  width: fit-content;
 }
 
 .text-content {
@@ -320,16 +296,16 @@
 
 .image-content {
   position: relative;
-  width: 270px;
-  height: 360px;
+  width: 600px;
+  height: 550px;
 }
 
 .image-content .forma1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 270px;
-  height: 360px;
+  width: 350px;
+  height: 450px;
   border-radius: 0 0 0 120px;
   background-color: var(--color-gray-50);
   z-index: 1;
@@ -337,10 +313,10 @@
 
 .image-content .forma2 {
   position: absolute;
-  top: 100px;
-  left: 200px;
-  width: 300px;
-  height: 400px;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 450px;
   border-radius: 80px 0 80px 0;
   background-color: var(--color-gray-800);
   z-index: 2;

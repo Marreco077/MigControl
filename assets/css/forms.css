@@ -1,48 +1,27 @@
-.banner {
-  background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
-  color: var(--color-gray-50);
-  padding: 80px 100px;
-}
-
-.banner.about {
-  border-bottom-right-radius: 175px;
-  height: 660px;
-}
-
-.banner-content {
+.banner.preforms {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
-.banner.preforms {
+  justify-content: center;
   border-top-left-radius: 175px;
+  height: auto;
   padding-bottom: 0;
 }
 
 .banner.preforms .banner-content {
   display: flex;
   align-items: start;
-  justify-content: center;
-  gap: 100px;
 }
 
 .banner.preforms .text-content {
-  width: 650px;
+  width: auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .banner.preforms .text-content h1 {
   font-size: 54px;
   line-height: 54px;
-}
-
-.banner.preforms .btn {
-  width: fit-content;
 }
 
 
