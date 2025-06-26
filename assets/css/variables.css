@@ -36,23 +36,42 @@ body {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 62px;
+  line-height: 62px;
   font-weight: 600;
   margin: 0;
   padding: 0;
 }
 
 h2 {
-  font-size: 46px;
-  font-weight: 500;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
+h3 {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+
 p {
   font-size: 20px;
-  font-weight: 300;
   line-height: 22px;
+  font-weight: 300;
   max-width: 800px;
   margin: 0;
   padding: 0;

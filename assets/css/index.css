@@ -49,29 +49,17 @@
 
 .carousel-caption {
   position: absolute;
-  width: 900px;
+  max-width: 800px;
   top: 30%;
   left: 0%;
-  padding: 0 100px;
+  margin: 0 140px;
   text-align: left;
   color: var(--color-gray-50);
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-
-.carousel-caption .title {
-  font-size: 52px;
-  line-height: 52px;
-}
-
-.carousel-caption .subtitle {
-  font-size: 28px;
-}
-
-.carousel-caption .description {
-  font-size: 20px;
+  gap: 20px;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-caption .button {
@@ -80,7 +68,7 @@
 
 /* Formatação do menu de serviços */
 .product-bar {
-  padding: 0 100px;
+  padding: 0 120px;
   position: relative;
   height: 14vh;
   width: 100%;
@@ -144,7 +132,7 @@
 
 /* Produtos */
 .produtos-destaque {
-  padding: 60px 100px;
+  padding: 80px 140px;
   background: var(--color-gray-50);
   color: var(--color-gray-800);
 }
@@ -207,7 +195,7 @@
 }
 
 .imagem-wrapper:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .imagem-wrapper .tag {
@@ -224,8 +212,8 @@
 }
 
 .imagem-wrapper:hover .tag {
-  background-color: var(--color-gray-600);
-  color: var(--color-primary-400);
+  background-color: var(--color-primary-600);
+  color: var(--color-gray-50);
   padding: 4px 20px;
 }
 
@@ -256,28 +244,48 @@
   color: var(--color-gray-50);
 }
 
-.text-content {
+.banner {
+  background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
+  color: var(--color-gray-50);
+  padding: 80px 160px;
+}
+
+.banner.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 175px;
+  height: auto;
+}
+
+.banner.about .banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.banner.about .text-content {
   display: flex;
   flex-direction: column;
 }
 
-.text-content .title p {
-  margin: 20px 0 40px;
-  padding-right: 100px;
-}
-
-.text-content .title h1 {
-  width: 600px;
+.banner.about .text-content h1 {
   line-height: 60px;
 }
 
-.image-content {
+.banner.about .text-content p {
+  margin: 20px 0 40px;
+  max-width: 700px;
+}
+
+.banner.about .image-content {
   position: relative;
   width: 600px;
   height: 550px;
 }
 
-.image-content .forma1 {
+.banner.about .image-content .forma1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -288,7 +296,7 @@
   z-index: 1;
 }
 
-.image-content .forma2 {
+.banner.about .image-content .forma2 {
   position: absolute;
   bottom: 0;
   right: 0;

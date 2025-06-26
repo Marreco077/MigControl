@@ -1,28 +1,5 @@
 @import './variables.css';
 
-.banner {
-  background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
-  color: var(--color-gray-50);
-  padding: 80px 160px;
-}
-
-.banner.about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom-right-radius: 175px;
-  height: auto;
-}
-
-.banner-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-  width: fit-content;
-}
-
-
 .banner.preforms {
   display: flex;
   align-items: center;
@@ -35,13 +12,22 @@
 .banner.preforms .banner-content {
   display: flex;
   align-items: start;
+  justify-content: center;
+  gap: 100px;
+  width: fit-content;
+}
+
+.banner.preforms img {
+  width: 400px;
+  height: auto;
+  width: fit-content;
 }
 
 .banner.preforms .text-content {
-  width: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  max-width: 820px;
+  padding-top: 40px;
 }
 
 .banner.preforms .text-content h1 {
@@ -49,6 +35,10 @@
   line-height: 54px;
 }
 
+.banner.preforms .text-content p {
+  margin: 20px 0 40px;
+  max-width: 700px;
+}
 
 .custom-modal {
   background: var(--color-gray-50);
