@@ -13,9 +13,14 @@
 
 /* Footer Base */
 .footer {
+    background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
+}
+
+.footer-bg {
     background: var(--color-gray-800);
     color: white;
     padding: 40px 0;
+    border-radius: 100px 100px 0 0;
 }
 
 /* Header do Footer */
