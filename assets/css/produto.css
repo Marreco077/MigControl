@@ -20,6 +20,7 @@ body {
 .hero {
   background-color: var(--color-gray-100);
   color: var(--color-gray-800);
+  padding-top: 10vh;
 }
 
 .hero .container-fluid {

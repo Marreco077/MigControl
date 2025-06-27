@@ -56,7 +56,7 @@ hr {
 }
 
 .social-link i {
- font-size: 16px;
+  font-size: 16px;
 }
 
 .social-link {
@@ -174,10 +174,6 @@ hr {
     padding: 80px 60px 40px;
   }
 
-  .footer-logo img {
-    width: 160px;
-  }
-
   .footer-content .content-spacing {
     display: flex;
     flex-direction: column;
@@ -193,22 +189,6 @@ hr {
 }
 
 @media (max-width: 992px) {
-
-  .footer-logo img {
-    width: 140px;
-  }
-
-  .social-link i {
-    font-size: 14px;
-    font-weight: 200;
-   }
-
-  .social-link {
-    width: 30px;
-    height: 30px;
-  }
-
-
   .footer-content .content-spacing {
     display: flex;
     flex-direction: column;
@@ -219,5 +199,13 @@ hr {
   span {
     font-size: 16px;
     font-weight: 300;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }

@@ -44,7 +44,7 @@
           </button>
 
           <!-- Navigation Menu -->
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Início</a>
@@ -52,40 +52,31 @@
               <li class="nav-item">
                 <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#produtos.html"
-                  id="produtosDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Produtos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+
+              <li class="nav-item dropdown-custom">
+                <a class="nav-link dropdown-toggle-custom" href="#">Produtos</a>
+                <ul class="dropdown-menu-custom">
                   <li>
-                    <a class="dropdown-item" href="#ponto-eletronico">Ponto Eletrônico</a>
-                    <ul class="dropdown-submenu">
-                      <li><a class="dropdown-item" href="#">Relógio de Ponto Biométrico</a></li>
-                      <li><a class="dropdown-item" href="#">Relógio de Ponto Facial</a></li>
-                      <li><a class="dropdown-item" href="#">Relógio de Ponto Facial com Impressão</a></li>
-                      <li><a class="dropdown-item" href="#">Software de Controle de Ponto</a></li>
-                      <li><a class="dropdown-item" href="#">Bobina Térmica</a></li>
+                    <button class="submenu-toggle">Ponto Eletrônico</button>
+                    <ul class="submenu">
+                      <li><a href="#">Relógio de Ponto Biométrico</a></li>
+                      <li><a href="#">Relógio de Ponto Facial</a></li>
+                      <li><a href="#">Relógio com Impressão</a></li>
+                      <li><a href="#">Software de Controle</a></li>
+                      <li><a href="#">Bobina Térmica</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#produto2">Controle de Acesso</a>
-                    <ul class="dropdown-submenu">
-                      <li><a class="dropdown-item" href="#">Catraca iDBlock Next</a></li>
-                      <li><a class="dropdown-item" href="#">iDFace Max</a></li>
-                      <li><a class="dropdown-item" href="#">iDFace</a></li>
-                      <li><a class="dropdown-item" href="#">iDFlex</a></li>
-                      <li><a class="dropdown-item" href="#">iD Secure</a></li>
+                    <button class="submenu-toggle">Controle de Acesso</button>
+                    <ul class="submenu">
+                      <li><a href="#">Catraca iDBlock Next</a></li>
+                      <li><a href="#">iDFace Max</a></li>
+                      <li><a href="#">iDFace</a></li>
+                      <li><a href="#">iDFlex</a></li>
+                      <li><a href="#">iD Secure</a></li>
                     </ul>
                   </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#todos-produtos">Todos os Produtos</a></li>
+                  <li><a href="#todos-produtos">Todos os Produtos</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -141,52 +132,5 @@
         </div>
       </div>
     </div>
-
-    <!-- Header JavaScript -->
-    <script>
-      // Header scroll effect
-      window.addEventListener('scroll', function () {
-        const header = document.querySelector('.header-main')
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled')
-        } else {
-          header.classList.remove('scrolled')
-        }
-      })
-
-      // Mobile menu close on link click
-      document.querySelectorAll('.nav-link').forEach((link) => {
-        link.addEventListener('click', () => {
-          const navbarCollapse = document.querySelector('.navbar-collapse')
-          if (navbarCollapse.classList.contains('show')) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse)
-            bsCollapse.hide()
-          }
-        })
-      })
-
-      // Search functionality
-      document.querySelector('.search-submit').addEventListener('click', function () {
-        const searchInput = document.querySelector('.search-input')
-        const searchTerm = searchInput.value.trim()
-
-        if (searchTerm) {
-          // Aqui você pode implementar a lógica de busca
-          console.log('Pesquisando por:', searchTerm)
-          // Fechar modal
-          const modal = bootstrap.Modal.getInstance(document.getElementById('searchModal'))
-          modal.hide()
-          // Limpar input
-          searchInput.value = ''
-        }
-      })
-
-      // Enter key on search
-      document.querySelector('.search-input').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-          document.querySelector('.search-submit').click()
-        }
-      })
-    </script>
   </body>
 </html>

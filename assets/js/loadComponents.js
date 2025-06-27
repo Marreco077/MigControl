@@ -16,7 +16,7 @@ const headerStyles = () => {
     btnSearch.style.color = 'var(--color-gray-800)'
   } else {
     header.classList.remove('scrolled')
-    if (path === '/relogio-de-ponto.html') {
+    if (path.includes('/produto-')) {
       logo.src = '/assets/images/LogoMigControlAzul.png'
       navItems.forEach((navItem) => {
         navItem.style.color = 'var(--color-gray-800)'
@@ -33,6 +33,16 @@ const headerStyles = () => {
 }
 
 window.addEventListener('scroll', headerStyles)
+
+const dropSubmenu = () => {
+  document.querySelectorAll('.submenu-toggle').forEach((btn) => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault()
+      const submenu = this.nextElementSibling
+      submenu.classList.toggle('open')
+    })
+  })
+}
 
 async function loadComponent(componentName, targetElementId) {
   try {
@@ -65,20 +75,21 @@ async function loadComponent(componentName, targetElementId) {
 
       setTimeout(() => {
         headerStyles()
+        dropSubmenu()
       }, 100)
 
       // 👇 Executar JS especial para o componente 'forms'
       if (componentName === 'forms') {
         setTimeout(() => {
-          const form = document.getElementById("formularioContato")
-          const formModalEl = document.getElementById("formModal")
-          const confirmModalEl = document.getElementById("confirmModal")
+          const form = document.getElementById('formularioContato')
+          const formModalEl = document.getElementById('formModal')
+          const confirmModalEl = document.getElementById('confirmModal')
 
           if (form && formModalEl && confirmModalEl) {
             const formModal = new bootstrap.Modal(formModalEl)
             const confirmModal = new bootstrap.Modal(confirmModalEl)
 
-            form.addEventListener("submit", function (e) {
+            form.addEventListener('submit', function (e) {
               e.preventDefault()
 
               setTimeout(() => {
@@ -88,15 +99,13 @@ async function loadComponent(componentName, targetElementId) {
               }, 500)
             })
           } else {
-            console.warn("⚠️ Elementos do formulário não encontrados após load.")
+            console.warn('⚠️ Elementos do formulário não encontrados após load.')
           }
         }, 100) // garante que DOM está pronto após inserção
       }
-
     } else {
       console.error(`❌ Elemento destino "${targetElementId}" não encontrado no DOM`)
     }
-
   } catch (error) {
     console.error(`❌ Falha ao carregar o componente "${componentName}":`, error)
   }
