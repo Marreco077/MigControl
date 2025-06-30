@@ -47,8 +47,9 @@
 .hero-image img {
   max-width: 100%;
   height: auto;
-  max-height: 500px;
-  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  background: transparent;
 }
 
 .hero h2 {
@@ -100,12 +101,12 @@
 
 .section-header h2 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 34px;
   line-height: 1.2;
 }
 
 .section-header p {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-gray-600);
   line-height: 1.5;
 }
@@ -194,6 +195,14 @@
   font-size: 16px;
 }
 
+.video-section .section-header h2 {
+  font-size: 38px;
+}
+
+.video-section .section-header p {
+  font-size: 24px;
+}
+
 .video-container {
   flex: 1;
   width: 100%;
@@ -220,6 +229,15 @@
   object-fit: cover;
   background-color: var(--color-gray-200);
   transition: transform 0.3s ease;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  object-fit: cover;
+  background-color: var(--color-gray-200);
 }
 
 /* Technical Details */
@@ -626,11 +644,11 @@
   }
 
   .section-header h2 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .section-header p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   /* Video Section Mobile */
@@ -766,11 +784,11 @@
   }
   
   .section-header h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .section-header p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .feature-item {
@@ -880,4 +898,12 @@
     align-items: center;
     gap: 15px;
   }
+}
+
+.perspectiva-img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: transparent;
 }
