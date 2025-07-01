@@ -53,6 +53,10 @@
   color: var(--color-gray-900);
 }
 
+.modal {
+  --bs-modal-width: 800px;
+}
+
 .modal-header {
   border-bottom: 1px solid var(--color-gray-200);
   background: var(--color-primary-500);
@@ -173,7 +177,8 @@
 }
 
 /* Select ocupa toda a largura */
-select[name="produto"] {
+select[name="produto"],
+select[name="meiocontato"] {
   flex: 1 1 100%; /* força ocupar 100% da linha */
   width: 100%;
   margin-bottom: 1rem; /* espaçamento abaixo */

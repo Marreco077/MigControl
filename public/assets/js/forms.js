@@ -32,10 +32,14 @@ export function initializeForms() {
       if (result.success) {
         confirmModalLabel.textContent = "Mensagem enviada com sucesso!";
         confirmModalMessage.innerHTML = `
-          Suas informações foram enviadas, entraremos em contato via WhatsApp em até 3 dias úteis.<br><br>
-          Agradecemos o contato.<br><br>
-          Se preferir, fale diretamente com nossos representantes em horário comercial pelo telefone:<br>
-          <strong>(31) 99999-9999</strong>
+        Olá!<br/><br/>
+        Recebemos suas informações e agradecemos o seu interesse nos produtos e soluções Mig Control.<br/><br/>
+        Um de nossos consultores especializados entrará em contato com você em breve, utilizando a opção de contato preferencial 
+        que você indicou no formulário. Nosso objetivo é entender suas necessidades e apresentar as melhores soluções para a sua empresa.<br/><br/>
+        Fique atento aos nossos canais de comunicação. Caso tenha alguma urgência ou precise de atendimento imediato, 
+        você pode entrar em contato diretamente conosco pelo contatos indicados na aba “Contato”, durante nosso horário comercial.<br/><br/>
+        Atenciosamente,<br/>
+        Equipe Mig Control
         `;
         form.reset();
       } else {
