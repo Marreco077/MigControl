@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/enviar-email', async (req, res) => {
-  const { nome, email, cnpj, telefone, produto, mensagem } = req.body;
+  const { nome, email, cnpj, telefone, produto, meiocontato, mensagem } = req.body;
 
   const transporter = nodemailer.createTransport({
     host: 'mail02.softmig.com',
@@ -30,13 +30,14 @@ app.post('/enviar-email', async (req, res) => {
     <p><strong>CNPJ:</strong> ${cnpj}</p>
     <p><strong>Telefone:</strong> ${telefone}</p>
     <p><strong>Produto:</strong> ${produto}</p>
+    <p><strong>Produto:</strong> ${meiocontato}</p>
     <p><strong>Mensagem:</strong><br/>${mensagem}</p>
   `;
 
   try {
     await transporter.sendMail({
       from: `"${nome}" <${process.env.EMAIL_USER}>`,
-      to: 'matheus.machado@softmig.com',
+      to: '	comercial@migcontrol.com.br',
       subject: `Contato via formulário - ${nome}`,
       html: htmlMessage,
     });
