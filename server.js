@@ -13,15 +13,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/enviar-email', async (req, res) => {
   const { nome, email, cnpj, telefone, produto, meiocontato, mensagem } = req.body;
 
-  const transporter = nodemailer.createTransport({
-    host: 'mail02.softmig.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+    const transporter = nodemailer.createTransport({
+      host: 'localhost',
+      port: 25,
+      secure: false,
+      tls: { rejectUnauthorized: false }
+    });
 
   const htmlMessage = `
     <h3>Nova mensagem de contato - MigControl</h3>
@@ -30,14 +27,14 @@ app.post('/enviar-email', async (req, res) => {
     <p><strong>CNPJ:</strong> ${cnpj}</p>
     <p><strong>Telefone:</strong> ${telefone}</p>
     <p><strong>Produto:</strong> ${produto}</p>
-    <p><strong>Produto:</strong> ${meiocontato}</p>
+    <p><strong>Meio de Contato:</strong> ${meiocontato}</p>
     <p><strong>Mensagem:</strong><br/>${mensagem}</p>
   `;
 
   try {
     await transporter.sendMail({
       from: `"${nome}" <${process.env.EMAIL_USER}>`,
-      to: '	comercial@migcontrol.com.br',
+      to: 'comercial@migcontrol.com.br',
       subject: `Contato via formulário - ${nome}`,
       html: htmlMessage,
     });
@@ -49,5 +46,21 @@ app.post('/enviar-email', async (req, res) => {
   }
 });
 
+// Rota status para confirmar que o servidor está rodando
+app.get('/status', (req, res) => {
+  res.send('🟢 Node.js está respondendo corretamente!');
+});
+
+// Servir arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Fallback para SPA (Single Page Application)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
+// Inicialização do servidor
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+});
