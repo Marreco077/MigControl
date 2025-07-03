@@ -9,7 +9,7 @@ const headerStyles = () => {
 
   if (window.scrollY > 0) {
     header.classList.add('scrolled');
-    logo.src = '/assets/images/LogoMigControlAzul.png';
+    logo.src = 'assets/images/LogoMigControlAzul.png';
     navItems.forEach((navItem) => {
       navItem.style.color = 'var(--color-gray-800)';
     });
@@ -17,13 +17,13 @@ const headerStyles = () => {
   } else {
     header.classList.remove('scrolled');
     if (path.includes('/produto-')) {
-      logo.src = '/assets/images/LogoMigControlAzul.png';
+      logo.src = 'assets/images/LogoMigControlAzul.png';
       navItems.forEach((navItem) => {
         navItem.style.color = 'var(--color-gray-800)';
       });
       btnSearch.style.color = 'var(--color-gray-800)';
     } else {
-      logo.src = '/assets/images/LogoMigControlBranca.png';
+      logo.src = 'assets/images/LogoMigControlBranca.png';
       navItems.forEach((navItem) => {
         navItem.style.color = 'var(--color-gray-100)';
       });
@@ -48,7 +48,7 @@ export async function loadComponent(componentName, targetElementId) {
   try {
     console.log(`🔄 Carregando componente: ${componentName}`);
 
-    const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
+    const basePath = window.location.pathname.includes('/public/') ? '../' : './';
     const componentPath = `${basePath}partials/${componentName}.html`;
     const cssPath = `${basePath}assets/css/${componentName}.css`;
 
