@@ -1,6 +1,7 @@
 @import './variables.css';
 
 /* Header Styles */
+
 .header-main {
   position: absolute;
   top: 0;
@@ -162,7 +163,6 @@ li {
 
 .submenu-toggle {
   border-bottom: 1px solid var(--color-gray-600);
-
 }
 
 /* Mobile Menu Toggle */
@@ -205,18 +205,21 @@ li {
 
 /* Search Modal */
 .search-modal .modal-content {
-  border-radius: 12px;
   border: none;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
+.search-modal {
+  border-radius: 14px;
+}
+
 .search-modal .modal-header {
-  padding: 1.5rem 1.5rem 0;
+  padding: 1rem 1.5rem 0.5rem;
 }
 
 .search-modal .modal-title {
   font-weight: 600;
-  color: var(--color-gray-800);
+  color: var(--color-gray-50);
 }
 
 .search-form {

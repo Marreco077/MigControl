@@ -36,6 +36,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--color-gray-50);
   color: var(--color-gray-800);
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -69,7 +70,6 @@ h4 {
   margin: 0;
   padding: 0;
 }
-
 
 p {
   font-size: 20px;

@@ -70,24 +70,22 @@
 .product-bar {
   padding: 0 120px;
   position: relative;
-  height: 14vh;
+  min-height: 14vh;
   width: 100%;
   overflow: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product-spacing {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
-  overflow-x: auto;
+  padding: 20px 0;
   scroll-behavior: smooth;
-  padding: 0;
   width: 100%;
   scrollbar-width: none; /* Firefox */
 }
@@ -178,7 +176,7 @@
 }
 
 .imagem-wrapper {
-  display: flex ;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 15px;

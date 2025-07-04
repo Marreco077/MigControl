@@ -1,111 +1,148 @@
-const loadedStyles = new Set();
-const path = window.location.pathname;
+const loadedStyles = new Set()
+const path = window.location.pathname
 
 const headerStyles = () => {
-  const header = document.querySelector('.header-main');
-  const logo = document.querySelector('.logo');
-  const navItems = document.querySelectorAll('.nav-link');
-  const btnSearch = document.querySelector('.fa-search');
+  const header = document.querySelector('.header-main')
+  const logo = document.querySelector('.logo')
+  const navItems = document.querySelectorAll('.nav-link')
+  const btnSearch = document.querySelector('.fa-search')
 
   if (window.scrollY > 0) {
-    header.classList.add('scrolled');
-    logo.src = 'assets/images/LogoMigControlAzul.png';
+    header.classList.add('scrolled')
+    logo.src = 'assets/images/LogoMigControlAzul.png'
     navItems.forEach((navItem) => {
-      navItem.style.color = 'var(--color-gray-800)';
-    });
-    btnSearch.style.color = 'var(--color-gray-800)';
+      navItem.style.color = 'var(--color-gray-800)'
+    })
+    btnSearch.style.color = 'var(--color-gray-800)'
   } else {
-    header.classList.remove('scrolled');
+    header.classList.remove('scrolled')
     if (path.includes('/produto-')) {
-      logo.src = 'assets/images/LogoMigControlAzul.png';
+      logo.src = 'assets/images/LogoMigControlAzul.png'
       navItems.forEach((navItem) => {
-        navItem.style.color = 'var(--color-gray-800)';
-      });
-      btnSearch.style.color = 'var(--color-gray-800)';
+        navItem.style.color = 'var(--color-gray-800)'
+      })
+      btnSearch.style.color = 'var(--color-gray-800)'
     } else {
-      logo.src = 'assets/images/LogoMigControlBranca.png';
+      logo.src = 'assets/images/LogoMigControlBranca.png'
       navItems.forEach((navItem) => {
-        navItem.style.color = 'var(--color-gray-100)';
-      });
-      btnSearch.style.color = 'var(--color-gray-100)';
+        navItem.style.color = 'var(--color-gray-100)'
+      })
+      btnSearch.style.color = 'var(--color-gray-100)'
     }
   }
-};
+}
 
-window.addEventListener('scroll', headerStyles);
+window.addEventListener('scroll', headerStyles)
 
 const dropSubmenu = () => {
   document.querySelectorAll('.submenu-toggle').forEach((btn) => {
     btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const submenu = this.nextElementSibling;
-      submenu.classList.toggle('open');
-    });
-  });
-};
+      e.preventDefault()
+      const submenu = this.nextElementSibling
+      submenu.classList.toggle('open')
+    })
+  })
+}
+
+const smoothEffect = () => {
+  const contatoLink = document.querySelector('.nav-link.contato')
+
+  if (!contatoLink) return
+
+  contatoLink.addEventListener('click', async function (e) {
+    e.preventDefault()
+
+    const footer = document.querySelector('#footer')
+    if (!footer) return
+
+    // Posição do topo do footer
+    const targetY = footer.getBoundingClientRect().top + window.scrollY
+    const duration = 1000 // duração em milissegundos (1 segundo)
+
+    const startY = window.scrollY
+    const startTime = performance.now()
+
+    const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t)
+
+    const animate = (currentTime) => {
+      const timeElapsed = currentTime - startTime
+      const progress = Math.min(timeElapsed / duration, 1)
+      const ease = easeInOutQuad(progress)
+      const newY = startY + (targetY - startY) * ease
+      window.scrollTo(0, newY)
+
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      }
+    }
+
+    requestAnimationFrame(animate)
+  })
+}
 
 export async function loadComponent(componentName, targetElementId) {
   try {
-    console.log(`🔄 Carregando componente: ${componentName}`);
+    console.log(`🔄 Carregando componente: ${componentName}`)
 
-    const basePath = window.location.pathname.includes('/public/') ? '../' : './';
-    const componentPath = `${basePath}partials/${componentName}.html`;
-    const cssPath = `${basePath}assets/css/${componentName}.css`;
+    const basePath = window.location.pathname.includes('/public/') ? '../' : './'
+    const componentPath = `${basePath}partials/${componentName}.html`
+    const cssPath = `${basePath}assets/css/${componentName}.css`
 
     // Carrega CSS se ainda não estiver carregado
     if (!loadedStyles.has(cssPath)) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = cssPath;
-      document.head.appendChild(link);
-      loadedStyles.add(cssPath);
-      console.log(`✅ CSS de "${componentName}" carregado`);
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = cssPath
+      document.head.appendChild(link)
+      loadedStyles.add(cssPath)
+      console.log(`✅ CSS de "${componentName}" carregado`)
     }
 
     // Busca e insere HTML do componente
-    const response = await fetch(componentPath);
-    if (!response.ok) throw new Error(`Erro ao carregar: ${response.status}`);
+    const response = await fetch(componentPath)
+    if (!response.ok) throw new Error(`Erro ao carregar: ${response.status}`)
 
-    const html = await response.text();
-    const targetElement = document.getElementById(targetElementId);
+    const html = await response.text()
+    const targetElement = document.getElementById(targetElementId)
 
     if (targetElement) {
-      targetElement.innerHTML = html;
-      console.log(`✅ Componente "${componentName}" inserido em #${targetElementId}`);
+      targetElement.innerHTML = html
+      console.log(`✅ Componente "${componentName}" inserido em #${targetElementId}`)
 
       setTimeout(() => {
-        headerStyles();
-        dropSubmenu();
-      }, 100);
+        headerStyles()
+        dropSubmenu()
+        smoothEffect()
+      }, 100)
 
       if (componentName === 'forms') {
         // Carrega forms.js dinamicamente e inicializa
         setTimeout(async () => {
           try {
-            const module = await import('./forms.js');
+            const module = await import('./forms.js')
             if (typeof module.initializeForms === 'function') {
-              module.initializeForms();
-              console.log('✅ forms.js carregado e inicializado');
+              module.initializeForms()
+              console.log('✅ forms.js carregado e inicializado')
             } else {
-              console.warn('⚠️ initializeForms() não exportado corretamente.');
+              console.warn('⚠️ initializeForms() não exportado corretamente.')
             }
           } catch (err) {
-            console.error('❌ Erro ao carregar forms.js:', err);
+            console.error('❌ Erro ao carregar forms.js:', err)
           }
-        }, 100);
+        }, 100)
       }
     } else {
-      console.error(`❌ Elemento destino "${targetElementId}" não encontrado no DOM`);
+      console.error(`❌ Elemento destino "${targetElementId}" não encontrado no DOM`)
     }
   } catch (error) {
-    console.error(`❌ Falha ao carregar o componente "${componentName}":`, error);
+    console.error(`❌ Falha ao carregar o componente "${componentName}":`, error)
   }
 }
 
 // Carregamento inicial
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('🚀 DOM carregado, iniciando componentes...');
-  loadComponent('footer', 'footer');
-  loadComponent('header', 'header');
-  loadComponent('forms', 'forms');
-});
+  console.log('🚀 DOM carregado, iniciando componentes...')
+  loadComponent('footer', 'footer')
+  loadComponent('header', 'header')
+  loadComponent('forms', 'forms')
+})
