@@ -98,6 +98,12 @@ hr {
   align-items: start;
 }
 
+.footer-content .contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
 .footer-content .about {
   max-width: 550px;
 }

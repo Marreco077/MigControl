@@ -50,7 +50,7 @@
 .carousel-caption {
   position: absolute;
   max-width: 800px;
-  top: 30%;
+  top: 25%;
   left: 0%;
   margin: 0 140px;
   text-align: left;
@@ -162,6 +162,11 @@
   animation: cair 0.6s forwards;
   animation-delay: var(--delay);
   margin-bottom: 50px;
+}
+
+.produto-card h5 {
+  font-weight: bolder;
+  height: 55px;
 }
 
 @keyframes cair {
