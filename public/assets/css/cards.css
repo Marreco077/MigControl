@@ -77,7 +77,7 @@
 }
 
 .diferencial-card .card-body-custom li {
-  font-size: 16px;
+  font-size: .85rem;
   font-weight: 300;
   list-style-type: disc;
 }
