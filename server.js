@@ -55,7 +55,7 @@ app.get('/status', (req, res) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Fallback para SPA (Single Page Application)
-app.get('*', (req, res) => {
+app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 

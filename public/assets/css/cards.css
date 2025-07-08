@@ -8,25 +8,61 @@
   padding: 80px 140px;
 }
 
+.diferenciais .container-fluid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .diferenciais .text-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+.diferenciais .text-content p {
+  max-width: 1200px;
+}
+
 .diferencial-card {
   position: relative;
   display: flex;
-  max-width: 500px;
+  max-width: 26vw;
+  height: 100%;
   border-radius: 0px 60px 60px 60px;
   background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
 .card-spacing {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.card-spacing .diferencial-row-primary {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-spacing .diferencial-row-secundary {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .diferencial-card .card-icon {
@@ -52,7 +88,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 275px;
+  min-height: 300px;
   color: var(--color-gray-50);
   padding: 40px 20px;
   z-index: 1;
@@ -60,13 +96,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 15%;
+  gap: 20px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .diferencial-card .card-body-custom h3 {
-  font-size: 26px;
+  font-size: 1.3rem;
   font-weight: 600;
   top: 30px;
 }
@@ -112,15 +148,15 @@
   }
 
   .diferencial-card .card-body-custom h3 {
-    font-size: 24px;
+    /* font-size: 24px; */
   }
 
   .diferencial-card .card-body-custom p {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
   .diferencial-card .card-body-custom li {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 }
 

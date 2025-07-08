@@ -72,12 +72,47 @@ h4 {
 }
 
 p {
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 1.1rem;
+  line-height: 1.7;
   font-weight: 300;
   max-width: 800px;
   margin: 0;
   padding: 0;
+}
+
+.section-title, .text-primary {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary-800);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary-400);
+  border-radius: 2px;
+}
+
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.text-primary {
+  color: var(--color-primary-400);
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-primary-800);
+  line-height: 1.2;
 }
 
 .button {

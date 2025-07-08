@@ -1,109 +1,326 @@
 @import './variables.css';
 
-/* ================= BANNER ================= */
-.banner-sobre-nos {
+/* Hero Section */
+.hero-sobre {
   position: relative;
-  width: 100%;
-  min-height: 400px;
-  background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
+  min-height: 50vh;
+  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-600) 50%, var(--color-primary-400) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.text-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
   color: var(--color-gray-50);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.banner-sobre-nos .container {
-  max-width: 800px;
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
 }
 
-.banner-sobre-nos h1 {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  color: var(--color-gray-50);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.banner-sobre-nos p {
-  font-size: 22px;
-  color: var(--color-gray-100);
-  line-height: 1.6;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.hero-badge i {
+  font-size: 1.2rem;
+  color: var(--color-secondary);
 }
 
-/* ================= QUEM SOMOS ================= */
-.quem-somos-section {
-  padding: 80px 0;
-  background-color: var(--color-white);
+/* Nossa História Section */
+.nossa-historia {
+  background: var(--color-gray-100);
 }
 
-.quem-somos-section .section-title {
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--color-gray-800);
+.content-box {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.quem-somos-section p {
-  font-size: 20px;
-  color: var(--color-gray-600);
+.content-box p {
+  font-size: 1.1rem;
   line-height: 1.7;
-  text-align: justify;
+  color: var(--color-gray-700);
 }
 
-.quem-somos-section .team-image img {
+.clientes-destaque {
+  padding: 1.5rem;
+  background: var(--color-gray-50);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.clientes-destaque h6 {
+  font-weight: 600;
+  color: var(--color-primary-800);
+  margin-bottom: 1rem;
+}
+
+.clientes-logos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cliente-tag {
+  background: var(--color-primary-100);
+  color: var(--color-primary-800);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.image-container {
+  position: relative;
+  padding: 1rem;
+}
+
+.rounded-image {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* ================= VALORES ================= */
-.diferenciais {
-  padding: 80px 0;
-  background-color: var(--color-gray-50);
+.rounded-image:hover {
+  transform: translateY(-5px);
 }
 
-.diferenciais h1 {
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--color-gray-800);
+/* Nosso Diferencial Section */
+.nosso-diferencial {
+  background: var(--color-gray-50);
+}
+
+.diferencial-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+  margin-bottom: 1rem;
+}
+
+.diferencial-highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-400));
+  color: var(--color-gray-50);
+  padding: 2rem;
+  border-radius: 20px;
   text-align: center;
-  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-/* ================= RESPONSIVIDADE ================= */
-@media (min-width: 992px) {
-  .quem-somos-section .content-text {
-    padding-right: 40px;
+.highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-card i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.highlight-card h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.highlight-card p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Benefícios Section */
+.beneficios {
+  background: var(--color-gray-100);
+}
+
+.beneficio-card {
+  background: var(--color-gray-50);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.beneficio-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-400));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-50);
+  font-size: 2rem;
+}
+
+.beneficio-icon img {
+  max-width: 60%;
+  max-height: auto;
+  color: var(--color-gray-50);
+  filter: invert(1);
+}
+
+.beneficio-card h5 {
+  font-weight: 600;
+  color: var(--color-primary-800);
+  margin-bottom: 1rem;
+}
+
+.beneficio-card p {
+  color: var(--color-gray-700);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Segmentos Section */
+.segmentos {
+  background: var(--color-gray-50);
+}
+
+.segmento-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-primary-50);
+  border: 2px solid var(--color-primary-200);
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.segmento-tag:hover {
+  background: var(--color-primary-100);
+  border-color: var(--color-primary-400);
+  transform: translateY(-2px);
+}
+
+.segmento-tag i {
+  font-size: 1.5rem;
+  color: var(--color-primary-600);
+}
+
+.segmento-tag span {
+  font-weight: 500;
+  color: var(--color-primary-800);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 992px) {
-  .banner-sobre-nos h1 {
-    font-size: 50px;
-  }
-  .quem-somos-section .team-image {
-    margin-top: 40px;
-  }
+.content-box,
+.beneficio-card,
+.segmento-tag {
+  animation: fadeInUp 0.6s ease-out;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .banner-sobre-nos {
-    min-height: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .hero-title {
+    font-size: 2.5rem;
   }
-  .banner-sobre-nos h1 {
-    font-size: 45px;
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
-  .banner-sobre-nos p {
-    font-size: 20px;
+  
+  .section-title, .text-primary {
+    font-size: 2rem;
   }
-  .quem-somos-section,
-  .diferenciais {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  
+  .lead-text {
+    font-size: 1.1rem;
+  }
+  
+  .clientes-logos {
+    justify-content: center;
+  }
+  
+  .diferencial-highlight {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title, .text-primary {
+    font-size: 1.75rem;
+  }
+  
+  .content-box {
+    padding: 1rem 0;
+  }
+  
+  .clientes-destaque {
+    padding: 1rem;
+  }
+  
+  .beneficio-card {
+    padding: 1.5rem;
+  }
+  
+  .segmento-tag {
+    justify-content: center;
+    text-align: center;
   }
 }
