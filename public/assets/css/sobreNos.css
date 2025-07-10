@@ -4,7 +4,12 @@
 .hero-sobre {
   position: relative;
   min-height: 50vh;
-  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-600) 50%, var(--color-primary-400) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-800) 0%,
+    var(--color-primary-600) 50%,
+    var(--color-primary-400) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +62,12 @@
 /* Nossa História Section */
 .nossa-historia {
   background: var(--color-gray-100);
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0 140px;
 }
 
 .content-box {
@@ -98,6 +109,7 @@
   border-radius: 20px;
   font-weight: 500;
   font-size: 0.9rem;
+  width: fit-content;
 }
 
 .image-container {
@@ -124,7 +136,13 @@
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--color-gray-700);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.diferencial-text .lead-text {
+  font-size: 1.7rem;
+  line-height: 1.1;
+  color: var(--color-primary-900);
 }
 
 .diferencial-highlight {
@@ -142,6 +160,11 @@
   text-align: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  width: 100%;
 }
 
 .highlight-card:hover {
@@ -149,14 +172,13 @@
 }
 
 .highlight-card i {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
   color: var(--color-secondary);
 }
 
 .highlight-card h5 {
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .highlight-card p {
@@ -216,6 +238,16 @@
   margin: 0;
 }
 
+.card-spacing .sobre-nos-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.sobre-nos-cards .diferencial-card .card-body-custom {
+  min-height: 200px;
+}
 /* Segmentos Section */
 .segmentos {
   background: var(--color-gray-50);
@@ -272,23 +304,24 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
-  .section-title, .text-primary {
+
+  .section-title,
+  .text-primary {
     font-size: 2rem;
   }
-  
+
   .lead-text {
     font-size: 1.1rem;
   }
-  
+
   .clientes-logos {
     justify-content: center;
   }
-  
+
   .diferencial-highlight {
     margin-top: 2rem;
   }
@@ -298,27 +331,28 @@
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem;
   }
-  
-  .section-title, .text-primary {
+
+  .section-title,
+  .text-primary {
     font-size: 1.75rem;
   }
-  
+
   .content-box {
     padding: 1rem 0;
   }
-  
+
   .clientes-destaque {
     padding: 1rem;
   }
-  
+
   .beneficio-card {
     padding: 1.5rem;
   }
-  
+
   .segmento-tag {
     justify-content: center;
     text-align: center;

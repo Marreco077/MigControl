@@ -1,534 +1,461 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>
-			MigControl - Soluções em Controle de Acesso e Ponto Eletrônico
-		</title>
-		<link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
-		<!-- Bootstrap CSS -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<!-- Font Awesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="assets/css/index.css" />
-		<link rel="stylesheet" href="assets/css/cards.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MigControl - Soluções em Controle de Acesso e Ponto Eletrônico</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/cards.css" />
+  </head>
 
-	<body>
-		<!-- Header -->
-		<div id="header"></div>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
 
-		<!-- Hero Section -->
-		<section id="home" class="position-relative">
-			<div
-				id="carouselExampleIndicators"
-				class="carousel slide"
-				data-bs-ride="carousel"
-			>
-				<div class="carousel-indicators">
-					<button
-						type="button"
-						data-bs-target="#carouselExampleIndicators"
-						data-bs-slide-to="0"
-						class="active"
-						aria-current="true"
-						aria-label="Slide 1"
-					></button>
-					<button
-						type="button"
-						data-bs-target="#carouselExampleIndicators"
-						data-bs-slide-to="1"
-						aria-label="Slide 2"
-					></button>
-					<button
-						type="button"
-						data-bs-target="#carouselExampleIndicators"
-						data-bs-slide-to="2"
-						aria-label="Slide 3"
-					></button>
-				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img
-							class="d-block w-100"
-							src="./assets/images/carrossel1.png"
-							alt="Primeiro Slide"
-						/>
-						<div class="carousel-caption">
-							<h2>+ Soluções Completas</h2>
-							<h1>Soluções em controle de ponto e acesso</h1>
-							<p class="description">
-								Transforme a gestão da sua empresa com as soluções completas da
-								Mig Control. Oferecemos tecnologia de ponta para controle de
-								ponto e acesso, garantindo eficiência, segurança e conformidade.
-								Simplifique processos, otimize recursos e tenha total controle
-								sobre o fluxo de pessoas e informações.
-							</p>
-							<button
-								type="button"
-								class="button"
-								onclick="window.location.href='produtos.html'"
-							>
-								Conheça nossos produtos >
-							</button>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img
-							class="d-block w-100"
-							src="./assets/images/carrossel2.png"
-							alt="Segundo Slide"
-						/>
-						<div class="carousel-caption">
-							<h2>+ Agilidade</h2>
-							<h1>Registro ágil e sem filas para o ponto dos Colaboradores</h1>
-							<p class="description">
-								Chega de burocracia e filas! Com as soluções de controle de
-								ponto da Mig Control, seus colaboradores registram a entrada e
-								saída de forma rápida e intuitiva. Ganhe agilidade no dia a dia,
-								reduza o tempo de espera e otimize a produtividade da sua
-								equipe. Tecnologia que trabalha a favor do seu tempo.
-							</p>
-							<button
-								type="button"
-								class="button"
-								onclick="window.location.href='produtos.html'"
-							>
-								Conheça nossos produtos >
-							</button>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img
-							class="d-block w-100"
-							src="./assets/images/carrossel3.png"
-							alt="Terceiro Slide"
-						/>
-						<div class="carousel-caption">
-							<h2>+ Segurança</h2>
-							<h1>Controle e Segurança no Acesso à sua Empresa</h1>
-							<p class="description">
-								Proteja o que é mais importante para sua empresa com as soluções
-								de controle de acesso da Mig Control. Garanta a segurança de
-								seus colaboradores, ativos e informações, controlando quem entra
-								e sai do seu ambiente. Tenha total visibilidade e tranquilidade
-								com sistemas robustos e confiáveis. Sua segurança é a nossa
-								prioridade.
-							</p>
-							<button
-								type="button"
-								class="button"
-								onclick="window.location.href='produtos.html'"
-							>
-								Conheça nossos produtos >
-							</button>
-						</div>
-					</div>
-				</div>
-				<button
-					class="carousel-control-prev"
-					type="button"
-					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide="prev"
-				>
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Anterior</span>
-				</button>
-				<button
-					class="carousel-control-next"
-					type="button"
-					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide="next"
-				>
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Próximo</span>
-				</button>
-			</div>
-		</section>
+    <!-- Hero Section -->
+    <section id="home" class="position-relative">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./assets/images/carrossel1.png" alt="Primeiro Slide" />
+            <div class="carousel-caption">
+              <h2>+ Soluções Completas</h2>
+              <h1>Soluções em controle de ponto e acesso</h1>
+              <p class="description">
+                Transforme a gestão da sua empresa com as soluções completas da Mig Control.
+                Oferecemos tecnologia de ponta para controle de ponto e acesso, garantindo
+                eficiência, segurança e conformidade. Simplifique processos, otimize recursos e
+                tenha total controle sobre o fluxo de pessoas e informações.
+              </p>
+              <button type="button" class="button" onclick="window.location.href='produtos.html'">
+                Conheça nossos produtos >
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./assets/images/home/banner1.png" alt="Segundo Slide" />
+            <div class="carousel-caption">
+              <h2>+ Agilidade</h2>
+              <h1>Registro ágil e sem filas para o ponto dos Colaboradores</h1>
+              <p class="description">
+                Chega de burocracia e filas! Com as soluções de controle de ponto da Mig Control,
+                seus colaboradores registram a entrada e saída de forma rápida e intuitiva. Ganhe
+                agilidade no dia a dia, reduza o tempo de espera e otimize a produtividade da sua
+                equipe. Tecnologia que trabalha a favor do seu tempo.
+              </p>
+              <button type="button" class="button" onclick="window.location.href='produtos.html'">
+                Conheça nossos produtos >
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./assets/images/home/banner2.webp"
+              alt="Terceiro Slide"
+            />
+            <div class="carousel-caption">
+              <h2>+ Segurança</h2>
+              <h1>Controle e Segurança no Acesso à sua Empresa</h1>
+              <p class="description">
+                Proteja o que é mais importante para sua empresa com as soluções de controle de
+                acesso da Mig Control. Garanta a segurança de seus colaboradores, ativos e
+                informações, controlando quem entra e sai do seu ambiente. Tenha total visibilidade
+                e tranquilidade com sistemas robustos e confiáveis. Sua segurança é a nossa
+                prioridade.
+              </p>
+              <button type="button" class="button" onclick="window.location.href='produtos.html'">
+                Conheça nossos produtos >
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
 
-		<!-- Services Section -->
+    <!-- Services Section -->
+    <section class="product-bar">
+      <div class="col-6 col-sm-4 col-md-2 product-spacing">
+        <div>
+          <a href="catraca.html" class="product-item d-block text-decoration-none">
+            <img
+              src="./assets/icons/icon-catraca.png"
+              alt="Catraca Inteligente"
+              class="img-fluid mb-2"
+            />
+            <p>Catraca Inteligente</p>
+          </a>
+        </div>
 
-		<section class="product-bar">
-			<div class="col-6 col-sm-4 col-md-2 product-spacing">
-				<div>
-					<a
-						href="catraca.html"
-						class="product-item d-block text-decoration-none"
-					>
-						<img
-							src="./assets/icons/icon-catraca.png"
-							alt="Catraca Inteligente"
-							class="img-fluid mb-2"
-						/>
-						<p>Catraca Inteligente</p>
-					</a>
-				</div>
+        <div>
+          <a href="reconhecimento-facial.html" class="product-item d-block text-decoration-none">
+            <img
+              src="./assets/icons/icon-facial.png"
+              alt="Reconhecimento Facial"
+              class="img-fluid mb-2"
+            />
+            <p>Controlador de Acesso com Reconhecimento Facial</p>
+          </a>
+        </div>
 
-				<div>
-					<a
-						href="reconhecimento-facial.html"
-						class="product-item d-block text-decoration-none"
-					>
-						<img
-							src="./assets/icons/icon-facial.png"
-							alt="Reconhecimento Facial"
-							class="img-fluid mb-2"
-						/>
-						<p>Controlador de Acesso com Reconhecimento Facial</p>
-					</a>
-				</div>
+        <div>
+          <a href="fechadura.html" class="product-item d-block text-decoration-none">
+            <img
+              src="./assets/icons/icon-fechadura.png"
+              alt="Fechadura Biométrica"
+              class="img-fluid mb-2"
+            />
+            <p>Fechadura Digital<br />Biométrica</p>
+          </a>
+        </div>
 
-				<div>
-					<a
-						href="fechadura.html"
-						class="product-item d-block text-decoration-none"
-					>
-						<img
-							src="./assets/icons/icon-fechadura.png"
-							alt="Fechadura Biométrica"
-							class="img-fluid mb-2"
-						/>
-						<p>Fechadura Digital<br />Biométrica</p>
-					</a>
-				</div>
+        <div>
+          <a href="controle-acesso.html" class="product-item d-block text-decoration-none">
+            <img
+              src="./assets/icons/icon-software-acessos.png"
+              alt="Software Acesso"
+              class="img-fluid mb-2"
+            />
+            <p>Software para<br />Controle de Acesso</p>
+          </a>
+        </div>
 
-				<div>
-					<a
-						href="controle-acesso.html"
-						class="product-item d-block text-decoration-none"
-					>
-						<img
-							src="./assets/icons/icon-software-acessos.png"
-							alt="Software Acesso"
-							class="img-fluid mb-2"
-						/>
-						<p>Software para<br />Controle de Acesso</p>
-					</a>
-				</div>
+        <div>
+          <a href="registrador.html" class="product-item d-block text-decoration-none">
+            <img
+              src="./assets/icons/icon-registrador.png"
+              alt="Registrador Eletrônico"
+              class="img-fluid mb-2"
+            />
+            <p>Registrador Eletrônico<br />de Ponto</p>
+          </a>
+        </div>
 
-				<div>
-					<a
-						href="registrador.html"
-						class="product-item d-block text-decoration-none"
-					>
-						<img
-							src="./assets/icons/icon-registrador.png"
-							alt="Registrador Eletrônico"
-							class="img-fluid mb-2"
-						/>
-						<p>Registrador Eletrônico<br />de Ponto</p>
-					</a>
-				</div>
+        <div>
+          <a href="apuracao.html" class="product-item d-block text-decoration-none">
+            <img
+              src="./assets/icons/icon-software-apura.png"
+              alt="Software Apuração"
+              class="img-fluid mb-2"
+            />
+            <p>Software de Apuração<br />de Ponto</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-				<div>
-					<a
-						href="apuracao.html"
-						class="product-item d-block text-decoration-none"
-					>
-						<img
-							src="./assets/icons/icon-software-apura.png"
-							alt="Software Apuração"
-							class="img-fluid mb-2"
-						/>
-						<p>Software de Apuração<br />de Ponto</p>
-					</a>
-				</div>
-			</div>
-		</section>
+    <!-- Products Section -->
+    <section class="produtos-destaque">
+      <div class="container-fluid">
+        <div class="titulo">
+          <h2 class="section-title">Destaques Recentes</h2>
+          <p>
+            Oferecemos aos nossos clientes um amplo portfólio de produtos, soluções e serviços
+            através de um único fornecedor. Veja abaixo alguns dos nossos destaques.
+          </p>
+        </div>
 
-		<!-- Products Section -->
-		<section class="produtos-destaque">
-			<div class="container-fluid">
-				<div class="titulo">
-					<h2 class="section-title">Destaques Recentes</h2>
-					<p>
-						Oferecemos aos nossos clientes um amplo portfólio de produtos,
-						soluções e serviços através de um único fornecedor. Veja abaixo
-						alguns dos nossos destaques.
-					</p>
-				</div>
+        <div class="produtos-grid">
+          <!-- Produto 1 -->
+          <a href="produto-id-face-max.html" class="produto-card" style="--delay: 0s">
+            <div class="imagem-wrapper">
+              <img
+                src="./assets/images/produtos/iDFace-Max-Frontal.png"
+                alt="Terminal de Reconhecimento Facial Max"
+              />
+              <span class="tags">
+                <span class="tag">Segurança</span>
+                <span class="tag">Inovação</span>
+                <span class="tag">Eficiência</span>
+              </span>
+            </div>
+            <div class="produto-texto">
+              <h4>Terminal de Reconhecimento Facial Max</h4>
+              <p class="descricao">
+                Tecnologia de reconhecimento facial com detecção de vivacidade e capacidade para até
+                100 mil faces.
+              </p>
+              <span class="link-produto">Saiba Mais sobre o iDFace Max →</span>
+            </div>
+          </a>
 
-				<div class="produtos-grid">
-					<!-- Produto 1 -->
-					<div class="produto-card" style="--delay: 0s">
-						<!--             <h5>Revolucione o Controle de Acesso com Reconhecimento Facial</h5> -->
-						<div class="imagem-wrapper">
-							<img
-								src="./assets/images/home/produto-iDFaceMax.png"
-								alt="Produto 1"
-							/>
-							<span class="tag">Segurança</span><span class="tag">Inovação</span
-							><span class="tag">Eficiência</span>
-						</div>
-						<div class="produto-texto">
-							<h4>iDFaceMax</h4>
-							<p class="descricao">
-								Tecnologia de reconhecimento facial com detecção de vivacidade e
-								capacidade para até 100 mil faces.
-							</p>
-							<a href="produto-id-face-max.html"
-								>Saiba Mais sobre o iDFace Max →</a
-							>
-						</div>
-					</div>
+          <!-- Produto 2 -->
+          <a href="produto-id-secure-cloud.html" class="produto-card" style="--delay: 0.2s">
+            <div class="imagem-wrapper">
+              <img
+                src="./assets/images/produtos/iDSecure-Cloud.png"
+                alt="Software de Controle de Acesso Cloud"
+              />
+              <span class="tags">
+                <span class="tag">Segurança</span>
+                <span class="tag">Gerenciamento</span>
+                <span class="tag">Escalabilidade</span>
+              </span>
+            </div>
+            <div class="produto-texto">
+              <h4>Software de Controle de Acesso Cloud</h4>
+              <p class="descricao">
+                Controle de acesso inteligente e centralizado, com gestão de pessoas e veículos em
+                tempo real.
+              </p>
+              <span class="link-produto">Conheça o iDSecure →</span>
+            </div>
+          </a>
 
-					<!-- Produto 2 -->
-					<div class="produto-card" style="--delay: 0.2s">
-						<!--             <h5>Controle de Acesso Inteligente para a Segurança da Sua Empresa</h5> -->
-						<div class="imagem-wrapper">
-							<img
-								src="./assets/images/produtos/iDSecure-Cloud.png"
-								alt="Produto 2"
-							/>
-							<span class="tag">Segurança</span
-							><span class="tag">Gerenciamento</span
-							><span class="tag">Escalabilidade</span>
-						</div>
-						<div class="produto-texto">
-							<h4>iDSecure (Software de Controle de Acesso)</h4>
-							<p class="descricao">
-								Controle de acesso inteligente e centralizado, com gestão de
-								pessoas e veículos em tempo real.
-							</p>
-							<a href="produto-id-secure-cloud.html">Conheça o iDSecure →</a>
-						</div>
-					</div>
+          <!-- Produto 3 -->
+          <a href="produto-id-class-671.html" class="produto-card" style="--delay: 0.4s">
+            <div class="imagem-wrapper">
+              <img
+                src="./assets/images/produtos/iDClass-671.png"
+                alt="Relógio de Ponto Eletrônico 671"
+              />
+              <span class="tags">
+                <span class="tag">Conformidade</span>
+                <span class="tag">Produtividade</span>
+                <span class="tag">Confiabilidade</span>
+              </span>
+            </div>
+            <div class="produto-texto">
+              <h4>Relógio de Ponto Eletrônico 671</h4>
+              <p class="descricao">
+                Totalmente adequado à Portaria 671, o REP iDClass 671 combina biometria, cartão e
+                senha para um controle de ponto seguro e preciso.
+              </p>
+              <span class="link-produto">Conheça o REP 671 →</span>
+            </div>
+          </a>
 
-					<!-- Produto 3 -->
-					<div class="produto-card" style="--delay: 0.4s">
-						<!--             <h5>Gestão de Ponto em Conformidade e com Alta Performance</h5> -->
-						<div class="imagem-wrapper">
-							<img
-								src="./assets/images/home/produto-REP-iDClass-Facial.png"
-								alt="Produto 3"
-							/>
-							<span class="tag">Conformidade</span
-							><span class="tag">Produtividade</span
-							><span class="tag">Confiabilidade</span>
-						</div>
-						<div class="produto-texto">
-							<h4>REP iDClass 671</h4>
-							<p class="descricao">
-								Totalmente adequado à Portaria 671, o REP iDClass 671 combina
-								biometria, cartão e senha para um controle de ponto seguro e
-								preciso.
-							</p>
-							<a href="produto-id-class-671.html">Conheça o REP 671 →</a>
-						</div>
-					</div>
+          <!-- Produto 4 -->
+          <a href="produto-software-rhid.html" class="produto-card" style="--delay: 0.6s">
+            <div class="imagem-wrapper">
+              <img src="./assets/images/produtos/RHID.png" alt="Software de Apuração de Ponto" />
+              <span class="tags">
+                <span class="tag">Gestão de RH</span>
+                <span class="tag">Otimização</span>
+                <span class="tag">Acessibilidade</span>
+              </span>
+            </div>
+            <div class="produto-texto">
+              <h4>Software de Apuração de Ponto</h4>
+              <p class="descricao">
+                Controle de ponto 100% web com gestão de jornadas, férias e horas extras em uma só
+                plataforma.
+              </p>
+              <span class="link-produto">Explore o RHID →</span>
+            </div>
+          </a>
+        </div>
 
-					<!-- Produto 4 -->
-					<div class="produto-card" style="--delay: 0.6s">
-						<!--             <h5>Otimize a Gestão de Pessoas com o RH iD</h5> -->
-						<div class="imagem-wrapper">
-							<img src="./assets/images/produtos/RHID.png" alt="Produto 4" />
-							<span class="tag">Gestão de RH</span
-							><span class="tag">Otimização</span
-							><span class="tag">Acessibilidade</span>
-						</div>
-						<div class="produto-texto">
-							<h4>RHID (Software de Controle de Ponto)</h4>
-							<p class="descricao">
-								Controle de ponto 100% web com gestão de jornadas, férias e
-								horas extras em uma só plataforma.
-							</p>
-							<a href="produto-software-rhid.html">Explore o RHID →</a>
-						</div>
-					</div>
-				</div>
+        <div class="ver-todos">
+          <a href="produtos.html" class="button">Ver todos os produtos →</a>
+        </div>
+      </div>
+    </section>
 
-				<div class="ver-todos">
-					<a href="produtos.html" class="button">Ver todos os produtos > </a>
-				</div>
-			</div>
-		</section>
+    <!-- About Section -->
+    <section class="banner about">
+      <div class="banner-content">
+        <div class="image-content">
+          <div class="forma1"></div>
+          <div class="forma2"></div>
+        </div>
+        <div class="titulo">
+          <h2 class="section-title">
+            MigControl
+            <h3>Representante Control iD</h3>
+          </h2>
+          <p>
+            Somos representantes autorizados da Control iD, oferecendo soluções tecnológicas
+            inovadoras para controle de acesso, registro eletrônico de ponto e automação comercial,
+            com suporte técnico especializado e integração com diversos sistemas.
+          </p>
+          <button type="button" class="button" onclick="window.location.href='sobreNos.html'">
+            Sobre nós >
+          </button>
+        </div>
+      </div>
+    </section>
 
-		<!-- About Section -->
-		<section class="banner about">
-			<div class="banner-content">
-				<div class="image-content">
-					<div class="forma1"></div>
-					<div class="forma2"></div>
-				</div>
-				<div class="text-content">
-					<h2>
-						MigControl
-						<h3>Representante Control iD</h3>
-					</h2>
-					<p>
-						Somos representantes autorizados da Control iD, oferecendo soluções
-						tecnológicas inovadoras para controle de acesso, registro eletrônico
-						de ponto e automação comercial, com suporte técnico especializado e
-						integração com diversos sistemas.
-					</p>
-					<button
-						type="button"
-						class="button"
-						onclick="window.location.href='sobreNos.html'"
-					>
-						Sobre nós >
-					</button>
-				</div>
-			</div>
-		</section>
+    <!-- Differentials Section -->
+    <section class="diferenciais container-fluid">
+      <div class="text-content">
+        <h2 class="section-title">Nossos diferenciais</h2>
+        <h3 class="lead-text">Por Que a Mig Control é a Escolha Certa para sua Empresa?</h3>
+        <p>
+          Na Mig Control, entendemos que a escolha de um parceiro para soluções de controle de ponto
+          e acesso vai além do produto. É sobre confiança, expertise e um compromisso genuíno com o
+          sucesso do seu negócio. Conheça os pilares que nos tornam a referência em Belo Horizonte e
+          região:
+        </p>
+      </div>
 
-		<!-- Differentials Section -->
-		<section class="diferenciais container-fluid">
-			<div class="text-content">
-				<h2 class="section-title">Nossos diferenciais</h2>
-				<h3 class="lead-text">
-					Por Que a Mig Control é a Escolha Certa para sua Empresa?
-				</h3>
-				<p>
-					Na Mig Control, entendemos que a escolha de um parceiro para soluções
-					de controle de ponto e acesso vai além do produto. É sobre confiança,
-					expertise e um compromisso genuíno com o sucesso do seu negócio.
-					Conheça os pilares que nos tornam a referência em Belo Horizonte e
-					região:
-				</p>
-			</div>
+      <div class="card-spacing">
+        <div class="diferencial-row-primary">
+          <div class="diferencial-card">
+            <div class="card-icon">
+              <img src="./assets/icons/call-center-service.png" alt="Ícone de atendimento" />
+            </div>
+            <div class="card-body-custom">
+              <h3>Atendimento Consultivo e Personalizado</h3>
+              <p>
+                Nosso diferencial começa na escuta ativa. "Pegamos na mão" de cada cliente, desde a
+                análise inicial até a implementação e o suporte contínuo.
+              </p>
+            </div>
+          </div>
 
-			<div class="card-spacing">
-				<div class="diferencial-row-primary">
-					<div class="diferencial-card">
-						<div class="card-icon">
-							<img
-								src="./assets/icons/call-center-service.png"
-								alt="Ícone de atendimento"
-							/>
-						</div>
-						<div class="card-body-custom">
-							<h3>Atendimento Consultivo e Personalizado</h3>
-							<p>
-								Nosso diferencial começa na escuta ativa. "Pegamos na mão" de
-								cada cliente, desde a análise inicial até a implementação e o
-								suporte contínuo.
-							</p>
-						</div>
-					</div>
+          <div class="diferencial-card">
+            <div class="card-icon">
+              <img src="./assets/icons/evaluation.png" alt="Ícone de qualificação" />
+            </div>
+            <div class="card-body-custom">
+              <h3>Equipe Técnica de Alta Performance</h3>
+              <p>
+                Contamos com um time de profissionais altamente qualificados, com vasta experiência
+                e profundo conhecimento em manejo e instalação de equipamentos técnicos de alta
+                complexidade.
+              </p>
+            </div>
+          </div>
 
-					<div class="diferencial-card">
-						<div class="card-icon">
-							<img
-								src="./assets/icons/evaluation.png"
-								alt="Ícone de qualificação"
-							/>
-						</div>
-						<div class="card-body-custom">
-							<h3>Equipe Técnica de Alta Performance</h3>
-							<p>
-								Contamos com um time de profissionais altamente qualificados,
-								com vasta experiência e profundo conhecimento em manejo e
-								instalação de equipamentos técnicos de alta complexidade.
-							</p>
-						</div>
-					</div>
+          <div class="diferencial-card">
+            <div class="card-icon">
+              <img src="./assets/icons/regulation.png" alt="Ícone de suporte" />
+            </div>
+            <div class="card-body-custom">
+              <h3>Segurança Jurídica e Conformidade Garantida</h3>
+              <p>
+                As soluções que oferecemos são projetadas para garantir a conformidade total com as
+                mais recentes portarias do Ministério do Trabalho.
+              </p>
+            </div>
+          </div>
+        </div>
 
-					<div class="diferencial-card">
-						<div class="card-icon">
-							<img src="./assets/icons/regulation.png" alt="Ícone de suporte" />
-						</div>
-						<div class="card-body-custom">
-							<h3>Segurança Jurídica e Conformidade Garantida</h3>
-							<p>
-								As soluções que oferecemos são projetadas para garantir a
-								conformidade total com as mais recentes portarias do Ministério
-								do Trabalho.
-							</p>
-						</div>
-					</div>
-				</div>
+        <div class="diferencial-row-secundary">
+          <div class="diferencial-card">
+            <div class="card-icon">
+              <img src="./assets/icons/innovation.png" alt="Ícone de inovação" />
+            </div>
+            <div class="card-body-custom">
+              <h3>Inovação e Tecnologia de Ponta ao seu Alcance</h3>
+              <p>
+                Como representantes autorizados da Control iD, trazemos para sua empresa o que há de
+                mais moderno e inovador em relógios de ponto eletrônico e controle de acesso.
+              </p>
+            </div>
+          </div>
 
-				<div class="diferencial-row-secundary">
-					<div class="diferencial-card">
-						<div class="card-icon">
-							<img
-								src="./assets/icons/innovation.png"
-								alt="Ícone de inovação"
-							/>
-						</div>
-						<div class="card-body-custom">
-							<h3>Inovação e Tecnologia de Ponta ao seu Alcance</h3>
-							<p>
-								Como representantes autorizados da Control iD, trazemos para sua
-								empresa o que há de mais moderno e inovador em relógios de ponto
-								eletrônico e controle de acesso.
-							</p>
-						</div>
-					</div>
+          <div class="diferencial-card">
+            <div class="card-icon">
+              <img src="./assets/icons/partnership.png" alt="Ícone de parceria" />
+            </div>
+            <div class="card-body-custom">
+              <h3>Parceria Sólida com a Softmig</h3>
+              <p>
+                Nossa origem na Softmig, uma empresa com um histórico comprovado de sucesso no
+                mercado de telecomunicações e clientes de peso como Nokia, Petrobras e IURD, confere
+                à Mig Control uma base de credibilidade e excelência.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<div class="diferencial-card">
-						<div class="card-icon">
-							<img
-								src="./assets/icons/partnership.png"
-								alt="Ícone de parceria"
-							/>
-						</div>
-						<div class="card-body-custom">
-							<h3>Parceria Sólida com a Softmig</h3>
-							<p>
-								Nossa origem na Softmig, uma empresa com um histórico comprovado
-								de sucesso no mercado de telecomunicações e clientes de peso
-								como Nokia, Petrobras e IURD, confere à Mig Control uma base de
-								credibilidade e excelência.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <!-- CTA Section -->
+    <div id="forms"></div>
 
-		<!-- CTA Section -->
-		<div id="forms"></div>
+    <!-- Footer será carregado dinamicamente aqui -->
+    <div id="footer"></div>
 
-		<!-- Footer será carregado dinamicamente aqui -->
-		<div id="footer"></div>
+    <!-- Bootstrap JS -->
 
-		<!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+      crossorigin="anonymous"
+    ></script>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-			integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-			crossorigin="anonymous"
-		></script>
+    <!-- Carrousel anti pause -->
+    <script>
+      const carouselElement = document.getElementById('carouselExampleIndicators')
+      const carousel = new bootstrap.Carousel(carouselElement, {
+        interval: 5000,
+        pause: false,
+      })
+    </script>
 
-		<!-- Carrousel anti pause -->
-		<script>
-			const carouselElement = document.getElementById(
-				"carouselExampleIndicators"
-			);
-			const carousel = new bootstrap.Carousel(carouselElement, {
-				interval: 5000,
-				pause: false,
-			});
-		</script>
-
-		<!-- Custom JavaScript -->
-		<script type="module" src="assets/js/loadComponents.js"></script>
-		<script src="assets/js/cards.js"></script>
-	</body>
+    <!-- Custom JavaScript -->
+    <script type="module" src="assets/js/loadComponents.js"></script>
+    <script src="assets/js/cards.js"></script>
+  </body>
 </html>

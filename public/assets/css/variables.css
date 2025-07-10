@@ -80,7 +80,15 @@ p {
   padding: 0;
 }
 
-.section-title, .text-primary {
+.titulo {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title,
+.text-primary {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-primary-800);
@@ -102,7 +110,6 @@ p {
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 .text-primary {
   color: var(--color-primary-400);

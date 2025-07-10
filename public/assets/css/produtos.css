@@ -25,17 +25,8 @@
   background-color: var(--color-gray-50);
 }
 
-.product-category h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  margin-left: 0;
-}
-
-.category-desc {
-  font-size: 18px;
+.product-category p {
   color: var(--color-gray-600);
-  margin-bottom: 40px;
   max-width: 900px;
 }
 
@@ -57,6 +48,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .product-card:hover {
@@ -70,6 +62,11 @@
   object-fit: contain;
   background: var(--color-gray-100);
   padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
 }
 
 .product-info {
