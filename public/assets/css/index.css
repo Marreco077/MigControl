@@ -134,6 +134,10 @@
   gap: 30px;
 }
 
+.produtos-destaque .container-fluid {
+  padding: 0;
+}
+
 .produto-card {
   position: relative;
   background: #ffffff;
