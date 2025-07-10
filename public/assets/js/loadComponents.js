@@ -131,6 +131,34 @@ export async function loadComponent(componentName, targetElementId) {
           }
         }, 100)
       }
+      if (componentName === 'footer') {
+  const initWhatsappButton = () => {
+    const button = document.getElementById('whatsappButton')
+    if (!button) {
+      console.warn('⚠️ Botão WhatsApp não encontrado no DOM.')
+      return
+    }
+
+    const updateVisibility = () => {
+  if (window.scrollY > 200) {
+    button.classList.add('visible')
+  } else {
+    button.classList.remove('visible')
+  }
+}
+
+    // Verifica o estado inicial
+    updateVisibility()
+
+    // Escuta scroll
+    window.addEventListener('scroll', updateVisibility)
+
+    console.log('✅ Comportamento do botão WhatsApp ativado.')
+  }
+
+  // Espera o botão ser inserido no DOM
+  setTimeout(initWhatsappButton, 100)
+}
     } else {
       console.error(`❌ Elemento destino "${targetElementId}" não encontrado no DOM`)
     }

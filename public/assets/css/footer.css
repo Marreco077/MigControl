@@ -194,6 +194,37 @@ hr {
   }
 }
 
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button.visible {
+  opacity: 0.85;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.whatsapp-button:hover {
+  opacity: 1;
+}
+
+.whatsapp-button img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1);
+}
+
 @media (max-width: 992px) {
   .footer-content .content-spacing {
     display: flex;
