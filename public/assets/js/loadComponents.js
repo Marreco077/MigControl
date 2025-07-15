@@ -6,6 +6,7 @@ const headerStyles = () => {
   const logo = document.querySelector('.logo')
   const navItems = document.querySelectorAll('.nav-link')
   const btnSearch = document.querySelector('.fa-search')
+  const btnMenuBar = document.querySelector('.fa-bars')
 
   if (window.scrollY > 0) {
     header.classList.add('scrolled')
@@ -14,6 +15,7 @@ const headerStyles = () => {
       navItem.style.color = 'var(--color-gray-800)'
     })
     btnSearch.style.color = 'var(--color-gray-800)'
+    btnMenuBar.style.color = 'var(--color-gray-800)'
   } else {
     header.classList.remove('scrolled')
     if (path.includes('/produto-')) {
@@ -22,12 +24,20 @@ const headerStyles = () => {
         navItem.style.color = 'var(--color-gray-800)'
       })
       btnSearch.style.color = 'var(--color-gray-800)'
+      btnMenuBar.style.color = 'var(--color-gray-800)'
     } else {
       logo.src = 'assets/images/LogoMigControlBranca.png'
+       if (window.matchMedia("(max-width: 992px)").matches) {
       navItems.forEach((navItem) => {
-        navItem.style.color = 'var(--color-gray-100)'
+      navItem.style.color = 'var(--color-gray-800)'
+    })
+    } else {
+      navItems.forEach((navItem) => {
+      navItem.style.color = 'var(--color-gray-100)'
       })
+    }
       btnSearch.style.color = 'var(--color-gray-100)'
+      btnMenuBar.style.color = 'var(--color-gray-100)'
     }
   }
 }

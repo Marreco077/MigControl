@@ -65,6 +65,10 @@
   transition: transform 0.3s ease;
 }
 
+.product-card:nth-child(5) img {
+  padding: 40px;
+}
+
 .product-card:hover img {
   transform: scale(1.05);
 }
