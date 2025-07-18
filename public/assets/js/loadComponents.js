@@ -27,15 +27,15 @@ const headerStyles = () => {
       btnMenuBar.style.color = 'var(--color-gray-800)'
     } else {
       logo.src = 'assets/images/LogoMigControlBranca.png'
-       if (window.matchMedia("(max-width: 992px)").matches) {
-      navItems.forEach((navItem) => {
-      navItem.style.color = 'var(--color-gray-800)'
-    })
-    } else {
-      navItems.forEach((navItem) => {
-      navItem.style.color = 'var(--color-gray-100)'
-      })
-    }
+      if (window.matchMedia('(max-width: 992px)').matches) {
+        navItems.forEach((navItem) => {
+          navItem.style.color = 'var(--color-gray-800)'
+        })
+      } else {
+        navItems.forEach((navItem) => {
+          navItem.style.color = 'var(--color-gray-100)'
+        })
+      }
       btnSearch.style.color = 'var(--color-gray-100)'
       btnMenuBar.style.color = 'var(--color-gray-100)'
     }
@@ -48,10 +48,30 @@ const dropSubmenu = () => {
   document.querySelectorAll('.submenu-toggle').forEach((btn) => {
     btn.addEventListener('click', function (e) {
       e.preventDefault()
-      const submenu = this.nextElementSibling
-      submenu.classList.toggle('open')
+
+      const currentSubmenu = this.nextElementSibling
+      const isCurrentOpen = currentSubmenu.classList.contains('open')
+
+      document.querySelectorAll('.submenu').forEach((submenu) => {
+        submenu.classList.remove('open')
+      })
+
+      if (!isCurrentOpen) {
+        currentSubmenu.classList.add('open')
+      }
     })
   })
+
+  const dropdownToggle = document.querySelector('.dropdown-toggle-custom')
+  const dropdownMenu = document.querySelector('#dropdown-menu-custom')
+
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block'
+    })
+  }
 }
 
 const smoothEffect = () => {
@@ -142,33 +162,33 @@ export async function loadComponent(componentName, targetElementId) {
         }, 100)
       }
       if (componentName === 'footer') {
-  const initWhatsappButton = () => {
-    const button = document.getElementById('whatsappButton')
-    if (!button) {
-      console.warn('⚠️ Botão WhatsApp não encontrado no DOM.')
-      return
-    }
+        const initWhatsappButton = () => {
+          const button = document.getElementById('whatsappButton')
+          if (!button) {
+            console.warn('⚠️ Botão WhatsApp não encontrado no DOM.')
+            return
+          }
 
-    const updateVisibility = () => {
-  if (window.scrollY > 200) {
-    button.classList.add('visible')
-  } else {
-    button.classList.remove('visible')
-  }
-}
+          const updateVisibility = () => {
+            if (window.scrollY > 200) {
+              button.classList.add('visible')
+            } else {
+              button.classList.remove('visible')
+            }
+          }
 
-    // Verifica o estado inicial
-    updateVisibility()
+          // Verifica o estado inicial
+          updateVisibility()
 
-    // Escuta scroll
-    window.addEventListener('scroll', updateVisibility)
+          // Escuta scroll
+          window.addEventListener('scroll', updateVisibility)
 
-    console.log('✅ Comportamento do botão WhatsApp ativado.')
-  }
+          console.log('✅ Comportamento do botão WhatsApp ativado.')
+        }
 
-  // Espera o botão ser inserido no DOM
-  setTimeout(initWhatsappButton, 100)
-}
+        // Espera o botão ser inserido no DOM
+        setTimeout(initWhatsappButton, 100)
+      }
     } else {
       console.error(`❌ Elemento destino "${targetElementId}" não encontrado no DOM`)
     }
