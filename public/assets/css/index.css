@@ -284,44 +284,6 @@
   background: var(--color-primary-700);
 }
 
-/* ================= RESPONSIVIDADE ================= */
-@media (max-width: 1200px) {
-  .produtos-destaque,
-  .product-category .container-fluid,
-  .banner-products .container-fluid {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-}
-
-@media (max-width: 768px) {
-  .produtos-destaque,
-  .product-category .container-fluid,
-  .banner-products .container-fluid {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .products-grid,
-  .produtos-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
-
-  .product-info,
-  .produto-card .produto-texto {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .products-grid,
-  .produtos-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-}
-
 .banner.about {
   background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-800));
   color: var(--color-gray-50);
@@ -412,12 +374,12 @@
   transform: scale(1.05);
 }
 
-.banner.about .image-content .forma1:hover{
- transform: rotate(-5deg);
+.banner.about .image-content .forma1:hover {
+  transform: rotate(-5deg);
 }
 
 .banner.about .image-content .forma2:hover {
- transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 
 .banner.about .image-content .forma1::before {
@@ -432,13 +394,161 @@
   box-shadow: 0 0 10px var(--color-primary-500);
 }
 
-/* Responsivo */
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1200px) {
+  .produtos-destaque,
+  .product-category .container-fluid,
+  .banner-products .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
 @media (max-width: 768px) {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-size: 15px 15px;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .carousel-caption {
+    top: 15%;
+    position: absolute;
+    margin: 0 0 0 50px;
+    gap: 20px;
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel-caption h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .carousel-caption h2 {
+    font-size: 25px;
+  }
+
+  .carousel-caption p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .carousel-caption .button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .product-spacing {
+    padding: 20px 20px;
+    gap: 20px;
+  }
+
+  .product-item img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .product-item p {
+    color: var(--color-gray-800);
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .produtos-destaque,
+  .product-category .container-fluid,
+  .banner-products .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .produtos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .produto-card .produto-texto {
+    padding: 15px;
+  }
+
+  .ver-todos .button {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
   .image-content img {
     margin-top: 2rem;
   }
 
   .form-row {
     flex-direction: column;
+  }
+
+  .banner.about {
+    border-bottom-right-radius: 100px;
+    padding: 40px 20px;
+  }
+
+  .banner.about .banner-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .banner.about h2 {
+    font-size: 2.75rem;
+  }
+
+  .banner.about h3 {
+    font-size: 1.75rem;
+  }
+
+  .banner.about .image-content {
+    position: relative;
+    max-width: 380px;
+    height: 400px;
+  }
+
+  .banner.about .image-content .forma1 {
+    width: 220px;
+    height: 320px;
+    border-radius: 0 0 0 60px;
+  }
+
+  .banner.about .image-content .forma2 {
+    width: 220px;
+    height: 320px;
+    border-radius: 40px 0 40px 0;
+  }
+
+  .banner-content .button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid,
+  .produtos-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }

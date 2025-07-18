@@ -27,7 +27,7 @@
 .diferencial-card {
   position: relative;
   display: flex;
-  max-width: 26vw;
+  /* max-width: 400px; */
   height: 100%;
   border-radius: 0px 60px 60px 60px;
   background: linear-gradient(to right, var(--color-primary-800), var(--color-primary-400));
@@ -51,7 +51,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
 }
 
 .card-spacing .diferencial-row-secundary {
@@ -88,7 +89,8 @@
   top: 0;
   left: 0;
   right: 0;
-  min-height: 300px;
+  max-width: 300px;
+  min-height: 200px;
   color: var(--color-gray-50);
   padding: 40px 20px;
   z-index: 1;
@@ -146,24 +148,12 @@
     padding: 20px 30px;
     text-align: center;
   }
-
-  .diferencial-card .card-body-custom h3 {
-    /* font-size: 24px; */
-  }
-
-  .diferencial-card .card-body-custom p {
-    /* font-size: 14px; */
-  }
-
-  .diferencial-card .card-body-custom li {
-    /* font-size: 14px; */
-  }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .diferenciais {
-    display: flex;
-    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
   }
 
   .diferencial-card {

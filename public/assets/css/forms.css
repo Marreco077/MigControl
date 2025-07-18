@@ -34,6 +34,7 @@
   flex-direction: column;
   max-width: 820px;
   padding-top: 40px;
+  gap: 30px;
 }
 
 .banner.preforms .text-content h1 {
@@ -42,7 +43,6 @@
 }
 
 .banner.preforms .text-content p {
-  margin: 20px 0 40px;
   max-width: 700px;
 }
 
@@ -147,7 +147,6 @@
   border-radius: 8px;
   transition: background 0.3s ease, box-shadow 0.3s ease;
   align-self: center;
-  margin-top: 1rem;
 }
 
 .submit-btn:hover {
@@ -194,13 +193,37 @@ select[name='meiocontato'] {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  .banner {
+    padding: 40px;
+  }
+
+  .banner.preforms {
+    border-top-left-radius: 100px;
+  }
+
+  .banner.preforms .banner-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 40px;
+  }
+
   .preforms-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .image-content img {
-    margin-top: 2rem;
+  .banner.preforms img {
+    width: 350px;
+  }
+
+  .banner.preforms .text-content {
+    gap: 20px;
+  }
+
+  .banner.preforms .text-content h1 {
+    font-size: 45px;
+    line-height: 45px;
   }
 
   .form-row {

@@ -118,7 +118,7 @@ li {
   min-width: 250px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .dropdown-custom:hover #dropdown-menu-custom {
     display: block;
   }
@@ -265,7 +265,7 @@ li {
 }
 
 /* Mobile Responsive */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .header-main .navbar-collapse {
     position: absolute;
     background-color: var(--color-gray-50);
