@@ -238,16 +238,6 @@
   margin: 0;
 }
 
-.card-spacing .sobre-nos-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  width: 100%;
-}
-
-.sobre-nos-cards .diferencial-card .card-body-custom {
-  min-height: 200px;
-}
 /* Segmentos Section */
 .segmentos {
   background: var(--color-gray-50);
@@ -301,12 +291,24 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero-sobre {
+    position: relative;
+    min-height: 40vh;
+    padding-top: 20px;
+  }
+
+  .container-fluid {
+    padding: 0 20px;
+  }
+
   .hero-title {
     font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-subtitle {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .section-title,

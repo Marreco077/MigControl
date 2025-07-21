@@ -4,7 +4,12 @@
 .banner-products {
   position: relative;
   min-height: 50vh;
-  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-600) 50%, var(--color-primary-400) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-800) 0%,
+    var(--color-primary-600) 50%,
+    var(--color-primary-400) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,8 +26,17 @@
 
 /* ================= CATEGORIAS ================= */
 .product-category {
-  padding: 80px 0;
+  /* padding: 80px 0; */
   background-color: var(--color-gray-50);
+}
+
+#ponto-eletronico {
+  padding-top: 60px;
+}
+
+#controle-acesso {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .product-category p {
@@ -131,25 +145,25 @@
 @media (max-width: 992px) {
   .product-category .container-fluid,
   .banner-products .container-fluid {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 20px 20px 0;
   }
-}
 
-@media (max-width: 576px) {
-  .product-category .container-fluid,
-  .banner-products .container-fluid {
-    padding-left: 20px;
-    padding-right: 20px;
+  #ponto-eletronico {
+    padding-top: 40px;
+  }
+
+  #controle-acesso {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
 /* ================= RESPONSIVIDADE ================= */
 @media (max-width: 768px) {
   .banner-products {
-    min-height: 160px;
+    min-height: 200px;
   }
   .banner-products h1 {
     font-size: 36px;
   }
-} Add comment
+}

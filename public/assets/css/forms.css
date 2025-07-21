@@ -158,23 +158,6 @@
   font-weight: bolder;
 }
 
-.banner-content .btn {
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: var(--color-gray-50);
-  color: var(--color-gray-950);
-  border-radius: 0;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  transition: border-radius 0.3s ease;
-}
-
-.banner-content .btn:hover {
-  border-radius: 8px;
-}
-
 /* Select ocupa toda a largura */
 select[name='produto'],
 select[name='meiocontato'] {
@@ -192,13 +175,10 @@ select[name='meiocontato'] {
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
-  .banner {
-    padding: 40px;
-  }
-
+@media (max-width: 992px) {
   .banner.preforms {
-    border-top-left-radius: 100px;
+    padding: 30px 20px 0;
+    border-top-left-radius: 80px;
   }
 
   .banner.preforms .banner-content {
@@ -211,19 +191,33 @@ select[name='meiocontato'] {
   .preforms-content {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .banner.preforms img {
-    width: 350px;
+    width: 300px;
   }
 
   .banner.preforms .text-content {
     gap: 20px;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
-  .banner.preforms .text-content h1 {
+  .banner.preforms .text-content h1,
+  p {
     font-size: 45px;
     line-height: 45px;
+    text-align: center;
   }
 
   .form-row {
