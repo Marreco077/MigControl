@@ -512,13 +512,17 @@
   }
 
   .banner.about {
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 60px;
     padding: 40px 20px;
   }
 
   .banner.about .banner-content {
     flex-direction: column;
     gap: 30px;
+  }
+  
+  .banner.about .titulo {
+    width: 100%;
   }
 
   .banner.about h2 {
@@ -531,20 +535,25 @@
 
   .banner.about .image-content {
     position: relative;
-    max-width: 380px;
+    width: 100%;
+    object-fit: contain;
+    /* max-width: 380px; */
     height: 400px;
   }
 
   .banner.about .image-content .forma1 {
-    width: 220px;
-    height: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 300px;
     border-radius: 0 0 0 60px;
   }
 
   .banner.about .image-content .forma2 {
-    width: 220px;
-    height: 320px;
-    border-radius: 40px 0 40px 0;
+    width: 210px;
+    height: 300px;
+    border-radius: 60px 0 60px 0;
   }
 
   .banner-content .button {
