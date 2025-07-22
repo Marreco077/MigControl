@@ -440,27 +440,27 @@
   }
 
   .carousel-caption {
-  padding: 30px 50px 0;
+  padding: 30px 30px 0;
 }
 
   .carousel-caption h1 {
-    font-size: 44px;
-    line-height: 44px;
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
 
   .carousel-caption h2 {
-    font-size: 22px;
+    font-size: 1.2rem;
   }
 
   .carousel-caption p {
-    font-size: 18px;
-    line-height: 20px;
+    font-size: .9rem;
+    line-height: 1.15rem;
     text-align: left;
   }
 
   .carousel-caption .button {
     margin-top: 10px;
-    padding: 10px 16px;
+    padding: 6px 16px;
     border-radius: 8px;
     font-size: 16px;
   }

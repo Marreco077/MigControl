@@ -40,40 +40,40 @@ body {
 }
 
 h1 {
-  font-size: 62px;
-  line-height: 62px;
+  font-size: 3rem;
+  line-height: 3.2rem;
   font-weight: 600;
   margin: 0;
   padding: 0;
 }
 
 h2 {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
   font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 h3 {
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2.2rem;
   font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 h4 {
-  font-size: 26px;
-  line-height: 26px;
+  font-size: 1.8rem;
+  line-height: 1.9rem;
   font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
   font-weight: 300;
   max-width: 800px;
   margin: 0;
@@ -150,4 +150,31 @@ p {
 .button-gray {
   background-color: var(--color-gray-700);
   color: var(--color-gray-50);
+}
+
+@media (max-width: 768px) {
+h1 {
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.1rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+  line-height: 1.8rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
 }
